@@ -50,8 +50,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="9" />
+            <state relative-caret-position="-356">
+              <caret line="22" column="9" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -153,6 +153,7 @@
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -347,12 +348,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472278451705</updated>
       <workItem from="1472278453417" duration="6546000" />
-      <workItem from="1472358707066" duration="9065000" />
+      <workItem from="1472358707066" duration="9279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15611000" />
+    <option name="totallyTimeSpent" value="15825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
@@ -611,8 +612,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="-356">
+          <caret line="22" column="9" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="9" />
           <folding />
         </state>
       </provider>
