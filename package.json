@@ -48,5 +48,23 @@
     "wiredep": "^2.2.2",
     "yargs": "^3.3.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "name": "imedog",
+  "description": "Portfolio page ",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/start-angular/ani-theme.git"
+  },
+  "author": "Gerald Ruiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/start-angular/ani-theme/issues"
+  },
+  "homepage": "https://github.com/start-angular/ani-theme#readme"
 }
