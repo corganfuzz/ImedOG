@@ -161,6 +161,6 @@ gulp.task('docs', [], function() {
     .pipe(gulp.dest('./docs'));
 });
 
-gulp.task('heroku:production', ['less', 'js']);
+gulp.task('heroku:production', ['js']);
 
 
