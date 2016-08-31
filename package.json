@@ -1,7 +1,7 @@
 {
   "private": true,
   "engines": {
-    "node": ">=0.10.0"
+    "node": "6.3.1"
   },
   "scripts": {
     "start": "node app.js",
@@ -63,9 +63,5 @@
     "url": "git+https://github.com/start-angular/ani-theme.git"
   },
   "author": "Gerald Ruiz",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/start-angular/ani-theme/issues"
-  },
-  "homepage": "https://github.com/start-angular/ani-theme#readme"
+  "license": "ISC"
 }
