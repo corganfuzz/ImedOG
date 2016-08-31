@@ -160,3 +160,7 @@ gulp.task('docs', [], function() {
     .pipe($.ngdocs.process())
     .pipe(gulp.dest('./docs'));
 });
+
+gulp.task('heroku:production', ['libs',  'less', 'js']);
+
+

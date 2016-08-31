@@ -4,7 +4,8 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start": "gulpfile.js"
+    "start": "node app.js",
+    "postinstall": "gulp heroku:production"
   },
   "devDependencies": {
     "apache-server-configs": "^2.11.0",
@@ -26,7 +27,7 @@
     "gulp-livereload": "^3.8.0",
     "gulp-load-plugins": "^0.8.0",
     "gulp-minify-html": "^1.0.0",
-    "gulp-ng-annotate": "^0.5.2",
+    "gulp-ng-annotate": "^0.5.3",
     "gulp-ngdocs": "^0.2.10",
     "gulp-plumber": "^0.6.6",
     "gulp-rename": "^1.2.0",

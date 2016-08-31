@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * @ngdoc overview
- * @name yapp
- * @description
+ // * @ngdoc overview
+ // * @name yapp
+ // * @description
  * # yapp
  *
  * Main module of the application.
@@ -16,7 +16,7 @@ angular
   .config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.when('/dashboard', '/dashboard/overview');
-        $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/dashboard');
 
     $stateProvider
       .state('base', {
