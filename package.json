@@ -4,6 +4,7 @@
     "node": "6.3.1"
   },
   "scripts": {
+    "start": "gulp serve",
     "postinstall": "bower install"
   },
   "devDependencies": {
