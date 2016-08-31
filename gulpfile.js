@@ -169,7 +169,7 @@ gulp.task('docs', [], function() {
     .pipe(gulp.dest('./docs'));
 });
 
-gulp.task('heroku:production', ['jshint', 'jscs', 'html', 'images', 'fonts', 'extras']);
+
 
 
 
