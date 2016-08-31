@@ -54,14 +54,22 @@ gulp.task('images', function() {
     .pipe(gulp.dest('dist/images'));
 });
 
+// gulp.task('fonts', function() {
+//   return gulp.src(require('main-bower-files')().concat('app/fonts/**/*')
+//     .concat('bower_components/bootstrap/fonts/*'))
+//     .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
+//     .pipe($.flatten())
+//     .pipe(gulp.dest('dist/fonts'))
+//     .pipe(gulp.dest('.tmp/fonts'));
+// });
+
 gulp.task('fonts', function() {
-  return gulp.src(require('main-bower-files')().concat('app/fonts/**/*')
-    .concat('bower_components/bootstrap/fonts/*'))
-    .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
-    .pipe($.flatten())
-    .pipe(gulp.dest('dist/fonts'))
-    .pipe(gulp.dest('.tmp/fonts'));
+  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
+    .concat('app/fonts/**/*'))
+    .pipe(gulp.dest('.tmp/fonts'))
+    .pipe(gulp.dest('dist/fonts'));
 });
+
 
 gulp.task('extras', function() {
   return gulp.src([
