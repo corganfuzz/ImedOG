@@ -77,7 +77,9 @@
     "gulp-useref": "^1.1.1",
     "karma": "0.12.37",
     "karma-jasmine": "0.3.8",
-    "karma-phantomjs-launcher": "0.1.4"
+    "karma-phantomjs-launcher": "0.1.4",
+    "wiredep": "2.2.2",
+    "yargs": "3.32.0"
   },
   "name": "imedog",
   "description": "Portfolio page ",
