@@ -96,14 +96,14 @@ gulp.task('connect', ['styles'], function() {
     .use(serveIndex('app'));
 
   require('http').createServer(app)
-    .listen(process.env.PORT || 9000, function() {
-      var host = server.address().address;
-      var port = server.address().port;
-      console.log('Listening on http://%s:%s', host, port);
+    .listen(process.env.PORT || 9000)
+    .on('listening', function() {
+      console.log('Started connect web server on http://localhost:9000');
     });
 
-});
 
+
+});
 
 gulp.task('serve', ['wiredep', 'connect', 'fonts', 'watch'], function() {
   if (argv.open) {
