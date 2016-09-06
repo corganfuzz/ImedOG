@@ -93,8 +93,7 @@
     "test": "test"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/start-angular/ani-theme.git"
+    "type": "git"
   },
   "author": "Gerald Ruiz",
   "license": "ISC"
