@@ -8,4 +8,4 @@
 // 4. Place a link to the external JavaScript file between the <body></body> tags of the document after the comment "Insert code here"
 
 var hello = "Hello JavaScript";
-alert(hello)
+alert(hello);
