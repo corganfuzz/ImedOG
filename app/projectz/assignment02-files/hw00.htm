@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw00.htm</title>
+<!--
+INSTRUCTIONS:
+
+Ask for name.
+
+Write JavaScript code to do the following:
+
+1. Use a prompt() box to ask the user for their name (e.g. "What is your name?").  Store the value in a variable.
+
+2. Display the same name in the <h1>, <p>, and <span> tags using the .textContent property
+
+3. Place your JavaScript code where it says "Place your JavaScript code here"
+
+You will need to create a JavaScript variable to store the name.
+
+References:
+
+http://www.w3schools.com/js/js_variables.asp
+
+http://www.w3schools.com/js/js_popup.asp
+
+http://www.w3schools.com/jsref/met_win_prompt.asp
+
+http://www.w3schools.com/jsref/prop_node_textcontent.asp
+
+//-->
+</head>
+<body>
+
+<h1 id="name1"></h1>
+
+<p id="name2"></p>
+
+<span id="name3"></span>
+
+<script>
+// Place your JavaScript code here
+  var question =  prompt("What is your name?");
+  document.getElementById("name1").innerHTML = question;
+  document.getElementById("name2").innerHTML = question;
+  document.getElementById("name3").innerHTML = question;
+
+</script>
+</body>
+</html>

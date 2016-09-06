@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw02.htm</title>
+<!--
+INSTRUCTIONS:
+
+Ask for name.
+
+Write JavaScript code to do the following:
+
+1. Use a prompt() box to ask the user for their name (e.g. "What is your name?").  Store the value in a variable.
+
+2. Display the name in the <h1> tag
+
+3. Use JavaScript to display the character length of the name in the <h2> tag
+
+4. Use JavaScript to display the name in uppercase in the <h3> tag
+
+Display the result(s) within the HTML tags using either .innerHTML or .textContent
+You will need to create a JavaScript variable to store the name.
+
+Do you think it is safe to use .innerHTML for this assignment?
+
+When complete and working upload to your web site and place a link to it from your student home page.
+
+References:
+
+http://www.w3schools.com/jsref/jsref_obj_string.asp
+
+
+//-->
+</head>
+<body>
+
+<h1 id="first"></h1>
+
+<h2 id="second"></h2>
+
+<h3 id="third"></h2>
+
+<script>
+// Place your JavaScript code here
+var name = prompt("What is your name ?");
+  document.getElementById("first").innerHTML = name;
+  document.getElementById("second").innerHTML = name.length;
+  document.getElementById("third").textContent = name.toUpperCase();
+
+</script>
+</body>
+</html>

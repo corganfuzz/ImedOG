@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw01.htm</title>
+<!--
+INSTRUCTIONS:
+
+Ask for color.
+
+Write JavaScript code to do the following:
+
+1. Use a prompt() box to ask the user for a color by name or hexcode (e.g. "What color?").  Store the value in a variable.
+
+2. Use the JavaScript .backgroundColor property to change the color of the page <body>
+
+3. Use JavaScript to display the name of the color in the <span> tag with the given ID
+
+References:
+
+http://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
+
+//-->
+</head>
+<body>
+
+<h1>My Favorite Color!</h1>
+
+<p>The color is <span id="color"></span></p>
+
+
+<script>
+// Place your JavaScript code here
+var color = prompt("What Color ? (include # for HEX value)");
+  document.getElementById("color").innerHTML = color;
+  document.body.style.backgroundColor = color;
+
+</script>
+</body>
+</html>

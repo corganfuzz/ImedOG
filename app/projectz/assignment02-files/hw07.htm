@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw07.htm</title>
+<!--
+INSTRUCTIONS:
+
+Modulus two numbers.
+
+Write JavaScript code to do the following:
+
+1.  Create two prompt() boxes to ask for two numbers.
+
+2.  Calculate the Modulus of the numbers
+
+3.  Display both numbers to the page (e.g. The first number will display within the first <span>, etc.)
+
+4.  Display the total of the numbers next to the "Result:"
+
+You will need to update the HTML tags with the id's needed so your JavaScript code can write the results.
+You will need to create the necessary variables needed to keep track of the values.
+
+//-->
+</head>
+<body>
+
+<h1>Modulus</h1>
+
+<p>First number: <span id="first"></span></p>
+
+<p>Second number: <span id="second"></span></p>
+
+<p>Result: <span id="result"></span></p>
+
+<script>
+// Place your JavaScript code here
+var first = +prompt("Enter first number:");
+var second = +prompt("Enter second number:");
+result = (first % second);
+document.getElementById("first").innerHTML = first;
+document.getElementById("second").innerHTML = second;
+document.getElementById("result").innerHTML = result;
+</script>
+</body>
+</html>
