@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw08.htm</title>
+<!--
+INSTRUCTIONS:
+
+The following JavaScript code is incomplete.  You must complete it.
+
+1.  When the user enters a number between 0 - 100 you must calculate the related letter grade when they click the button.
+
+2.  The letter grades are as follows:
+90 - 100 = A
+80 - 89 = B
+70 - 79 = C
+60 - 69 = D
+59 and below = F
+
+HINT: Another homework file has the logic for this.
+
+3.  Create the conditional logic needed to provide the calculation and populate the correct letter grade in the variable "letterGrade"
+
+4.  Add your JavaScript code where it says "Place conditional logic here"
+
+NOTE:  The event logic works correctly.
+
+BONUS:  Add validation.  If the user enters a number less than 0 or greater than 100 then display an error message (can be an alert() box).
+
+//-->
+</head>
+
+<body>
+
+<h1>Letter Grade</h1>
+
+<form>
+Input number grade: <input type="text" id="numberGrade">
+<button id="mybutton">Get Letter Grade</button>
+</form>
+
+<p>Letter grade: <span id="letterGrade"></span></p>
+
+
+<script>
+
+document.getElementById("mybutton").onclick = getLetterGrade;
+
+function getLetterGrade() {
+
+	var numberGrade = document.getElementById("numberGrade").value;
+	var letterGrade = "F";
+
+
+  // Place conditional logic here
+
+
+  if (numberGrade >= 90 && numberGrade <= 100) {
+    document.getElementById("letterGrade").innerHTML = "A";
+  }
+
+  else if (numberGrade >= 80 && numberGrade < 89) {
+    document.getElementById("letterGrade").innerHTML = "B";
+  }
+
+  else if (numberGrade >= 70 && numberGrade  < 79) {
+    document.getElementById("letterGrade").innerHTML = "C";
+  }
+
+  else if (numberGrade >= 60 && numberGrade < 69) {
+    document.getElementById("letterGrade").innerHTML = "D";
+  }
+  else if (numberGrade >= 0 && numberGrade < 59) {
+    document.getElementById("letterGrade").innerHTML = letterGrade;
+  }
+
+  else  {
+    document.getElementById("letterGrade").innerHTML = alert("Invalid Number only 0-100 allowed");
+  }
+
+
+
+	return false;
+}
+
+</script>
+
+</body>
+</html>

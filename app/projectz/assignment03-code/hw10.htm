@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+INSTRUCTIONS:
+
+Using embedded JavaScript
+
+Create the JavaScript code below to complete the calculations for the Pizza Order!
+
+Each pizza costs $10.
+There is an 8.25% sales tax for each order.
+The delivery tip amount is a percentage of the total pizza cost.
+The 3 customers below have ordered different quantities of pizza.
+
+1.  Calculate the total cost including delivery tip and sales tax for Customer 1.  Use document.getElementById().innerHTML to display the value in the related <span></span>
+2.  Calculate the total cost including delivery tip and sales tax for Customer 2.  Use document.getElementById().innerHTML to display the value in the related <span></span>
+3.  Calculate the total cost including delivery tip and sales tax for Customer 3.  Use document.getElementById().innerHTML to display the value in the related <span></span>
+4.  Calculate the Grand Total for all 3 customers and display the value in the related <span></span>
+
+BONUS:  Display all amounts with 2 decimal places.
+
+//-->
+
+<title>hw10.htm</title>
+
+</head>
+
+<body>
+
+<h1>Simple Pizza Order!</h1>
+
+<p>Large Pizza: $10.00</p>
+<p>Tax: 8.25%</p>
+
+<p>
+Customer 1: orders 5 large pizza's and pays a 10% delivery tip.  Cost:  $<span id="cust1total"></span>
+</p>
+
+<p>
+Customer 2: orders 2 large pizza's and pays a 15% delivery tip.  Cost:  $<span id="cust2total"></span>
+</p>
+
+<p>
+Customer 3: orders 10 large pizza's and pays a 0% delivery tip.  Cost:  $<span id="cust3total"></span>
+</p>
+
+<p>
+Grand Total:  <span id="grandtotal"></span>
+</p>
+
+<!-- Update code here -->
+<script>
+var grandtotal;
+var cust1total;
+var cust2total;
+var cust3total;
+var taxamount = 0.0825;
+var pizzacost = 10;
+
+
+
+
+// customer 1
+cust1total = pizzacost * 5 + (pizzacost * 5) * taxamount;
+cust1total = cust1total + cust1total*(10/100);
+
+document.getElementById("cust1total").innerHTML = cust1total.toFixed(2);
+
+
+// customer 2
+cust2total = pizzacost * 2 + (pizzacost * 5) * taxamount;
+cust2total = cust2total + cust2total*(10/100);
+document.getElementById("cust2total").innerHTML = cust2total.toFixed(2);
+
+
+// customer 3
+cust3total = pizzacost * 10 + (pizzacost * 5) * taxamount;
+cust3total = cust3total + cust3total*(10/100);
+document.getElementById("cust3total").innerHTML = cust3total.toFixed(2);
+
+
+
+// grand total
+grandtotal = cust1total + cust2total + cust3total;
+document.getElementById("grandtotal").innerHTML = grandtotal.toFixed(2);
+
+
+</script>
+
+</body>
+</html>

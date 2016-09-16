@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw06.htm</title>
+<!--
+INSTRUCTIONS:
+
+The following JavaScript code is incomplete.  You must complete it.
+
+1.  When the user enters an age you must display a message.
+
+2.  If the age entered is 18 or above then display in the <p> tag "You are old enough to vote! You are XX years old", where XX is the age they entered.
+
+3.  If the age entered is less than 18, then display in the <p> tag "You are not old enough to vote.  You must be YY", where YY is the voteAge.
+
+
+HINT: Another homework assignment has similar logic for this.
+
+4.  Create the conditional logic needed to provide response in the <p> tag with the id=response.
+
+5.  Add your JavaScript code where it says "Place conditional logic here"
+
+NOTE:  The event logic works correctly.  You will need to use if() statement.
+
+Reference:
+
+http://www.w3schools.com/js/js_functions.asp
+
+//-->
+</head>
+
+<body>
+
+<h1>Can you vote?</h1>
+
+<form>
+How old are you? <input type="text" id="yourAge">
+
+<button id="mybutton">Check</button>
+
+</form>
+
+<p id="response"></p>
+
+<script>
+
+document.getElementById("mybutton").onclick = checkAge;
+
+function checkAge() {
+
+	var yourAge = document.getElementById("yourAge").value;
+	var voteAge = 18;
+	var response = "You ARE old enough to vote! You are " + yourAge + " years old";
+
+	// Place conditional logic here
+
+  if (yourAge >= voteAge) {
+
+    document.getElementById("response").innerHTML = response;
+  }
+  else
+
+	  document.getElementById("response").innerHTML = "You are NOT old enough to vote.  You MUST be " + voteAge + " years old";
+
+	return false;
+}
+
+</script>
+
+</body>
+</html>

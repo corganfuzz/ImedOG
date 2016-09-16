@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw04.htm</title>
+<!--
+INSTRUCTIONS:
+
+Conditionals
+
+You are given 2 variables in each section below. Write the conditional if()...else() statement(s) that will compare the variables and display the following message(s)
+a) if the variables are equal then display -- "The values are equal"
+b) if the first variable is greater than the second variable -- "The first value is greater than the second"
+c) if the first variable is less than the second variable -- "The first value is less than the second"
+
+Use document.write() to display the messages
+
+Upload to your web site when completed.  Place a link to this file from your student home page.
+
+If you get stuck see an example here:  http://www.imed2351.com/javascript/hw-conditionals-sol.htm
+
+
+BONUS:  Instead of using separate if() statements for each section, create a user-defined function and pass the values are arguments.
+You can name the function compareValues() for example.
+
+Reference:
+
+http://www.w3schools.com/js/js_comparisons.asp
+
+http://www.w3schools.com/js/js_if_else.asp
+
+
+//-->
+</head>
+
+<body>
+
+<h1>Conditionals</h1>
+
+<script>
+
+  function CompareValue(a, b) {
+    if (a > b) {
+      document.write("The first value is greater than the second");
+    }
+    else if (a < b) {
+      document.write("The first value is less than the second");
+    }
+      else if (a == b) {
+          document.write("The Values are Equal");
+        }
+  }
+</script>
+
+<script>
+	var studentAge = 5;
+	var teacherAge = 28;
+	// Place conditional with message here
+CompareValue(studentAge, teacherAge);
+
+
+</script>
+
+<hr>
+
+<script>
+	var bikeSpeed = 100;
+	var carSpeed = 50;
+	// Place conditional with message here
+CompareValue(bikeSpeed, carSpeed);
+</script>
+
+<hr>
+
+<script>
+	var pennyCount = 125;
+	var dollarCount = 125;
+	// Place conditional with message here
+CompareValue(pennyCount, dollarCount);
+</script>
+
+
+</body>
+</html>

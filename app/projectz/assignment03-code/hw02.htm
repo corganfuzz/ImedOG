@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+INSTRUCTIONS:
+
+Use JavaScript to modify text/string.
+
+Create a variable named myString, with the value "What is all this?"
+
+Use JavaScript to display the string in bold text.  HINT:  Do not use <b></b> tags.
+
+Use JavaScript to display the string with a font size of 7.
+
+Use JavaScript to display the string with a font color of red.
+
+Use JavaScript to display the string in all upper case.
+
+Do each of the items using document.write() on a separate line.
+
+
+Reference:
+
+http://www.w3schools.com/jsref/dom_obj_style.asp
+
+http://www.w3schools.com/jsref/jsref_obj_string.asp
+
+//-->
+
+<title>hw02.htm</title>
+
+</head>
+<body>
+
+<!-- Insert code here -->
+<script>
+
+
+
+  var myString = 'what is all this?';
+  var bolder = myString.bold();
+  var seven = myString.fontsize(7);
+  var color = myString.fontcolor('red');
+  var up = myString.toUpperCase();
+  document.write('<p>' + bolder + '</p>');
+  document.write('<p>' + up + '</p>');
+  document.write('<p>' + seven + '</p>');
+  document.write('<p>' + color + '</p>');
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

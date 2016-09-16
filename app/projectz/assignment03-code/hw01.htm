@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+INSTRUCTIONS:
+
+Using embedded JavaScript + Unobtrusive JavaScript
+
+Define the following variables.
+
+1. Define a String variable call yourName. Put your full name in the variable.
+
+2. Define a Numeric variable called numberSold with a value of 38.
+
+3. Define a Numeric variable called totalSales with a value of 128.75.
+
+4. Define a variable called goodMonth. Assign it a boolean value of false.
+
+5 Define a variable called annualSales. Assign it a value of 25000
+
+Use document.getElementById().innerHTML to display each variable value within its own <li> element.
+
+The browser rendered output should look something like below:
+
+1. The variable yourName contains: Tom
+2. The variable numberSold contains: 37
+3. The variable totalSales contains: 123.45
+4. The variable goodMonth contains: true
+5. The variable annualSales contains: 25000
+
+HINT:  Use the ID attribute value of the <span></span> tags for getElementById()
+
+Resources:
+
+http://www.w3schools.com/js/js_variables.asp
+
+http://www.w3schools.com/jsref/prop_html_innerhtml.asp
+
+//-->
+
+<title>hw01.htm</title>
+
+</head>
+<body>
+
+<ol>
+	<li> The variable yourName contains: <span id="yourName"></span></li>
+	<li> The variable numberSold contains: <span id="numberSold"></span></li>
+	<li> The variable totalSales contains: <span id="totalSales"></span></li>
+	<li> The variable goodMonth contains: <span id="goodMonth"></span></li>
+	<li> The variable annualSales contains: <span id="annualSales"></span></li>
+</ol>
+
+<!-- Insert code here -->
+<script>
+  var yourName = "Gerald " + "Ruiz";
+  var numberSold = 37;
+  var totalSales = 123.45;
+  var goodMonth = true;
+  var annualSales = 25000;
+
+ document.getElementById('yourName').innerHTML = yourName;
+  document.getElementById('numberSold').innerHTML = numberSold;
+    document.getElementById('totalSales').innerHTML = totalSales;
+      document.getElementById('goodMonth').innerHTML = goodMonth;
+        document.getElementById('annualSales').innerHTML = annualSales;
+
+</script>
+
+</body>
+</html>

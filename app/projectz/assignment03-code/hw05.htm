@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw05.htm</title>
+<!--
+INSTRUCTIONS:
+
+The following JavaScript code is broken.  There are 3 syntax errors.  Find them and fix them.
+
+BONUS: How can you make the logic of this better?
+
+Reference:
+
+http://www.w3schools.com/js/js_comparisons.asp
+
+http://www.w3schools.com/js/js_if_else.asp
+
+//-->
+</head>
+
+<body>
+
+<script>
+document.write('<p> Original if/else result </p>')
+var numberGrade = 79;
+
+if (numberGrade >= 90) {
+	document.write("A");
+}
+
+if (numberGrade >= 80 && numberGrade < 90) {
+	document.write("B");
+}
+
+if (numberGrade >= 70 && numberGrade  < 80) {
+	document.write("C");
+}
+
+if (numberGrade >= 60 && numberGrade < 70) {
+	document.write("D");
+}
+
+if (numberGrade < 60) {
+	document.write("F");
+}
+
+// logic better
+
+document.write('<p> A better  if/else logic  </p>')
+var numberGrade = 79;
+
+if (numberGrade >= 90) {
+  document.write("A");
+}
+
+  else if (numberGrade >= 80 && numberGrade < 90) {
+    document.write("B");
+  }
+
+  else if (numberGrade >= 70 && numberGrade  < 80) {
+    document.write("C");
+  }
+
+  else if (numberGrade >= 60 && numberGrade < 70) {
+    document.write("D");
+  }
+
+else  {
+  document.write("F");
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>

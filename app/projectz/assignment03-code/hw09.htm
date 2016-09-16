@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw09.htm</title>
+<!--
+INSTRUCTIONS:
+
+Mommy can I have some Candy?
+
+Write JavaScript code to do the following:
+
+1.  Pretend JavaScript is a two year old.  It keeps asking the same question over and over again until it gets the answer it wants.
+
+2.  Create a prompt() box that asks the question "Mommy can I have some Candy?"
+
+3.  Continue displaying the prompt() box until the answer is "yes".
+
+4.  If the answer is "yes" then update the <h1> tag to say "Thank you Mommy!"
+
+5.  If the answer is not "yes" then keep displaying the prompt() asking the same question...forever.
+
+HINT:  You must keep displaying the prompt until the expected response is entered.  You will need to use a loop.
+You will need to determine which loop to use.
+
+This may or may not be hard.
+
+//-->
+</head>
+<body>
+
+<h1 id="kidSays">Please Mommy?</h1>
+
+<script>
+// Place your JavaScript code here
+
+var answer;
+
+do {
+  answer = prompt("Mommy can I have some Candy?");
+
+} while (answer != "yes");
+
+document.getElementById("kidSays").innerHTML = "Thank you Mommy";
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+

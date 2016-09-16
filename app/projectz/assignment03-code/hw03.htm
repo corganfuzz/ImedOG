@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+INSTRUCTIONS:
+
+Random numbers
+
+Create a variable named:  randnumber
+
+Assign this variable the value of a random number.  HINT:  use Math.random()
+
+Use document.write() to display this number to the browser.
+
+
+Create a variable named:  fullrandomnumber
+
+Assign this variable the value of a random number between then 1 and 10.
+
+Use document.write() to display this number to the browser.
+
+
+
+Create a variable named:  bigrandomnumber
+
+Assign this variable the value of a random number between then 1 and 1000.
+
+Use document.write() to display this number to the browser.
+
+To see if it is random refresh the browser window to see the number(s) change
+
+Reference:
+
+http://www.w3schools.com/jsref/jsref_random.asp
+
+
+//-->
+
+<title>hw03.htm</title>
+
+</head>
+<body>
+
+<!-- Insert code here -->
+
+<script>
+  var randnumber = Math.random();
+  document.write('<p>' + randnumber + '<p>');
+
+
+  var fullrandomnumber = Math.floor((Math.random() * 10) + 1);
+  document.write('<p>' + fullrandomnumber + '<p>' );
+
+  var fullrandomnumber = Math.floor((Math.random() * 1000) + 1);
+  document.write('<p>' + fullrandomnumber + '<p>' );
+
+
+</script>
+
+
+
+</body>
+</html>
