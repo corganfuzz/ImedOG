@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw04.htm</title>
+<!--
+
+INSTRUCTIONS:
+
+1. Run this script.
+2. Modify this script to display each number in a table with rows, and then display the sum in the last row of the table.
+
+//-->
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1> Add the numbers between 0 and 20 </h1>
+
+
+<script>
+var sum = 0; //initialize the variable
+document.write('<table>');
+document.write('<th> Numbers </th>')
+for(i = 0; i <= 20; i++) {
+   sum += i;
+
+  document.write('<tr><td>' + i + '</td></tr>')
+}
+document.write('</table>');
+document.write('the sum of the numbers 0 to 20 is ' + sum);
+
+</script>
+
+</body>
+</html>

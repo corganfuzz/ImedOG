@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw03.htm</title>
+<!--
+
+INSTRUCTIONS:
+
+1. Run this script.
+2. Modify this script so it will lock out the user after 3 tries.
+3. Create and use a variable in the appropriate place(s) to keep track of the number of tries.
+4. If the number of tries exceeds 3 then display the message "YOU HAVE RUN OUT OF TRIES. ACCOUNT LOCKED!" in the <h2>
+
+
+//-->
+</head>
+
+<body>
+
+<h1>Bank of JavaScript</h1>
+
+<h2 id="message"></h2>
+
+<script>
+
+	var pin = 12345;
+	var entry;
+  var attempt = 0;
+
+	do {
+		entry = prompt("Enter your PIN:");
+    attempt++;
+
+	} while(entry != pin && attempt < 3);
+
+
+  if (entry == pin) {
+
+    document.getElementById("message").textContent = "PIN Accepted.  You now have access to your account.";
+
+	}
+
+	if (attempt == 3) {
+    document.getElementById("message").textContent = "YOU HAVE RUN OUT OF TRIES. ACCOUNT LOCKED!";
+
+  }
+
+
+
+
+</script>
+
+</body>
+</html>

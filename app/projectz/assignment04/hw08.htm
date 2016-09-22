@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw08.htm</title>
+<!--
+
+INSTRUCTIONS:
+
+	1.  Create a function named maxNum()
+	2.  The function will take 2 arguments (e.g. variables) named max, min
+	3.  The function will compare both values and return the number that is the largest.
+	4.  If the numbers are equal then it will return the word: Equal.
+	5.  Use document.write() to display the returned value from the function to the browser.
+	6.  Call the function different times using the numbers below:
+		- 6, 3
+		- 12, 150
+		- 9, -9
+		- 100, 100.01
+		- 98, 10
+		- 8, 8
+
+	Reference:
+
+	http://www.w3schools.com/js/js_functions.asp
+
+
+//-->
+</head>
+
+<body>
+
+<h1>Function Assignment</h1>
+
+<h2 id="result"></h2>
+
+
+<script>
+// INSERT JAVASCRIPT CODE HERE
+var min = prompt("Enter Min value");
+var max = prompt("Enter Max value");
+
+
+
+  function maxNum(min, max) {
+
+    if (min < max) {
+      document.write(max).innerHTML = result;
+
+    }
+      else if (min > max)  {
+        document.write(min).innerHTML = result;
+    }
+    else {
+      document.write("Equal").innerHTML = result;
+    }
+  }
+
+  maxNum(min, max);
+
+</script>
+</body>
+</html>

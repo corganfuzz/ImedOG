@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw06.htm</title>
+<!--
+
+INSTRUCTIONS:
+1. Run this script.
+2. Change the script so instead of displaying 9 rows & 9 columns, it displays 3 rows and 3 columns.
+3. Display the current row and column number in each cell (e.g. Row: X, Col: Y)
+4. Change the color of the text in the black squares to white
+
+//-->
+</head>
+
+<body bgcolor="#CCCC66">
+
+<h1>Chess Board using Nested For Loop</h1>
+
+<table width="540px" cellspacing="0px" cellpadding="0px">
+<!-- cell 540px wide (9 columns x 60px) -->
+
+<script>
+var total = 0;
+
+for(row = 1; row <= 3; row++) {
+
+	document.write('<tr>');
+
+	for(col = 1; col <= 3; col++) {
+
+		total = row + col;
+
+		if (total % 2 == 0) {
+			document.write('<td style="height: 30px; background-color: #FFFFFF">&nbsp;' + 'row x: ' + row + ' col y: ' + col + '</td>');
+		} else {
+			document.write('<td style="height: 30px; background-color: #000000">&nbsp;' + 'row x: ' + row + ' col y: ' + col + '</td>');
+		}
+	}
+
+	document.write('</tr>');
+}
+
+</script>
+
+</table>
+</body>
+</html>
