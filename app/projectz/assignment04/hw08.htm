@@ -44,22 +44,20 @@ function maxNum (a, b) {
     return true;
   }
   else if (a > b){
-    document.write(a + " is bigger than " + b);
+    document.write("the largest number between " + a +" and "+ b +" is "+ a );
     return true;
   }
 
-
-
-  else {
-    document.write(b + " is bigger than " + b);
+  else if (a < b){
+    document.write("the largest number between"  + a +" and"+ b +" is "+ b );
     return true;
   }
 
 }
 
-maxNum(6,3);
+maxNum(6, 3);
 document.write('<br/><br/>')
-maxNum(12,150);
+maxNum(12, 150);
 document.write('<br/><br/>')
 maxNum(9, -9);
 document.write('<br/><br/>')
