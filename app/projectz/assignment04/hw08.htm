@@ -31,31 +31,56 @@ INSTRUCTIONS:
 
 <h1>Function Assignment</h1>
 
-<h2 id="result"></h2>
 
 
 <script>
 // INSERT JAVASCRIPT CODE HERE
-var min = prompt("Enter Min value");
-var max = prompt("Enter Max value");
 
 
+function maxNum (a, b) {
 
-  function maxNum(min, max) {
+  if (a == b){
+    document.write("Equal");
+    return true;
+  }
+  else if (a > b){
+    document.write(a + " is bigger than " + b);
+    return true;
+  }
+  // or here
 
-    if (min < max) {
-      document.write(max).innerHTML = result;
 
-    }
-      else if (min > max)  {
-        document.write(min).innerHTML = result;
-    }
-    else {
-      document.write("Equal").innerHTML = result;
-    }
+  else {
+    document.write(b + " is bigger than " + b);
+    return true;
   }
 
-  maxNum(min, max);
+}
+
+maxNum(6,3);
+document.write('<br/><br/>')
+maxNum(12,150);
+document.write('<br/><br/>')
+maxNum(9, -9);
+document.write('<br/><br/>')
+maxNum(100, 100.01);
+document.write('<br/><br/>')
+maxNum(98, 10);
+document.write('<br/><br/>')
+maxNum(8, 8);
+
+
+
+
+
+//    maxNum(6, 3);
+//    maxNum(12, 150);
+//    maxNum(9, -9);
+//    maxNum(100, 100.01);
+//    maxNum(98, 10);
+//    maxNum(8, 8);
+
+
 
 </script>
 </body>

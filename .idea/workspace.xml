@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2352c0ce-04d1-43a5-a756-5c5cd5349ec0" name="Default" comment="assignments updated">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/projectz/assignment04/hw01.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/projectz/assignment04/hw02.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/projectz/assignment04/hw03.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/projectz/assignment04/hw04.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/projectz/assignment04/hw05.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/projectz/assignment04/hw06.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/projectz/assignment04/hw07.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/projectz/assignment04/hw08.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/projectz/assignment04/index.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/projectz/assignment04/hw08.htm" afterPath="$PROJECT_DIR$/app/projectz/assignment04/hw08.htm" />
     </list>
     <ignored path="ani-theme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -122,8 +114,8 @@
       <file leaf-file-name="hw08.htm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/projectz/assignment04/hw08.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+            <state relative-caret-position="588">
+              <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -496,12 +488,12 @@
       <workItem from="1473702010496" duration="346000" />
       <workItem from="1473824374493" duration="10950000" />
       <workItem from="1473914182103" duration="17829000" />
-      <workItem from="1474515415653" duration="8161000" />
+      <workItem from="1474515415653" duration="9922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99577000" />
+    <option name="totallyTimeSpent" value="101338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
@@ -870,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/projectz/assignment04/hw01.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/projectz/assignment04/hw02.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -923,10 +907,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/projectz/assignment04/hw01.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/projectz/assignment04/hw08.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        <state relative-caret-position="588">
+          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
           <folding />
         </state>
       </provider>
