@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw02.htm</title>
+<!--
+
+INSTRUCTIONS:
+
+	1.  Create an object named recipe.  Use an object literal.
+
+	2.  The object will have the following properties and values:
+		- title (a string): Chef John's Macaroni and Cheese
+		- servings (a number): 8
+		- ingredients (an array of strings): macaroni, flour, dried thyme, cayenne pepper, milk, nutmeg, salt, cheddar cheese, dijon mustard, break crumbs, melted butter
+		- oventemp (a number): 400
+
+	3.  The object will have 1 method (function) that will convert the oventemp from Fahrenheit to Celcius.  Name the method: fahrenheitToCelsius().
+		- The formula is:  Celsius = ((Fahrenheit - 32) * 5) / 9)
+
+	4.  Use .textContent to display the recipe information to the browser in the respective elements.  Use a for() loop and concatenate operator(s) to display the ingredients.
+
+	5.  Display the oven tempeture in Fehernheit and Celcius in the appropriate place.
+
+	Reference:
+
+	http://www.w3schools.com/js/js_objects.asp
+	http://www.teaching-materials.org/javascript/exercises/objects.html
+	http://www.teaching-materials.org/javascript/exercises/functions.html
+
+//-->
+</head>
+
+<body>
+
+<h1>Object Assignment</h1>
+
+<h2 id="title"></h2>
+
+<p>Serves: <span id="serves"></span></p>
+
+<p>
+	Ingredients:
+	<ul id="ingredients"></ul>
+</p>
+
+<p>Oven Temperature: <span id="fahrenheit"></span>' F (<span id="celsius"></span>' C)</p>
+
+
+
+<script>
+// INSERT JAVASCRIPT CODE HERE
+
+	var recipe = {
+	  title: "Chef John's Macaroni and Cheese",
+    servings: 8,
+    ingredients: ["macaroni", "flour", "dried thyme", "cayenne pepper", "milk", "nutmeg", "salt",
+                  "cheddar cheese", "dijon mustard", "break crumbs", "melted butter"],
+   overtemp: 400,
+
+  celsius: function fahrenheitToCelsius() {
+	    var Celsius = ((this.overtemp - 32) * 5) / 9;
+      return Celsius;
+    }
+  };
+
+    document.getElementById("title").textContent = recipe.title;
+    document.getElementById("serves").textContent = recipe.servings;
+
+
+
+  for (var x = 0; x < recipe.ingredients.length; x++){
+
+    document.getElementById("ingredients").innerHTML += "<li>" + recipe.ingredients[x] + "</li>";
+  }
+
+  document.getElementById("fahrenheit").textContent = recipe.overtemp;
+  document.getElementById("celsius").textContent = recipe.celsius();
+
+
+
+
+
+</script>
+</body>
+</html>

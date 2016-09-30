@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw04</title>
+
+<style>
+p {
+	display: none;
+}
+</style>
+</head>
+<body>
+
+<h1>My Hidden Content</h1>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula malesuada congue. Cras metus orci, aliquam a sodales quis, cursus in leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc gravida, lacus et euismod iaculis, nunc eros ornare ipsum, non convallis nunc arcu a nisi. Quisque pharetra lorem ut tortor scelerisque, aliquam accumsan orci molestie. In vestibulum, quam quis rhoncus tristique, turpis nisl viverra augue, id aliquet libero eros nec libero. Donec tempus blandit commodo. Integer sagittis, velit ut elementum tempus, ex justo molestie justo, in tincidunt dolor dolor vel lectus. In laoreet at ex euismod dictum. Suspendisse erat ante, commodo ut dapibus rutrum, facilisis at ipsum. Proin urna lectus, posuere eget efficitur non, ultrices nec magna. Curabitur eu sapien quis orci dictum placerat. Nam non ligula viverra, imperdiet neque ac, fringilla neque. Etiam et justo ac lacus sollicitudin rhoncus. Donec commodo ipsum mauris, vel egestas felis molestie tincidunt.
+</p>
+
+<p>
+Duis venenatis enim sit amet vehicula auctor. Etiam tortor augue, facilisis a luctus eget, pulvinar vel diam. Aliquam vehicula diam id sem laoreet condimentum. Mauris ut risus non mi sollicitudin aliquam. Vivamus eget sem sit amet nibh sodales mollis rutrum at justo. Pellentesque id nisi mattis, tristique odio ac, euismod justo. Donec quam erat, auctor id magna a, pharetra dapibus mauris. Quisque porttitor justo quis fringilla tincidunt. Sed nec efficitur est. Proin porttitor sem a augue aliquam facilisis. Curabitur nec dolor at sem eleifend maximus. Vestibulum vehicula at purus nec hendrerit.
+</p>
+
+<p>
+Sed ac urna ornare, congue eros vulputate, ornare mauris. Morbi risus arcu, fringilla ac ultricies eget, aliquam vel dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed interdum congue posuere. Maecenas sed ex quam. Quisque quam lacus, iaculis ut risus sit amet, imperdiet iaculis lacus. Aenean iaculis ipsum magna, a aliquet risus placerat in. Nullam mi libero, pretium eu sapien ac, fringilla maximus nisl. Aliquam lobortis augue at urna scelerisque ultrices. Donec sit amet tincidunt libero. Praesent euismod finibus purus rhoncus rutrum.
+</p>
+
+<p>
+Quisque consectetur sodales orci eu mattis. Duis vestibulum vel nisl eget malesuada. Pellentesque pellentesque egestas tellus sed scelerisque. Vestibulum nec justo est. Vestibulum porttitor nulla vitae iaculis laoreet. Duis varius euismod elit, faucibus imperdiet turpis vehicula a. Etiam dignissim condimentum justo, in aliquet arcu. Nullam ut sollicitudin turpis, quis efficitur sapien. Donec ac lorem volutpat, mollis lectus a, vestibulum erat. Nullam neque ante, venenatis in gravida quis, maximus gravida diam. Phasellus auctor tempor velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc vitae ex justo. Morbi efficitur lacus malesuada magna sagittis, vitae rutrum orci vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque euismod neque ac justo finibus feugiat.
+</p>
+
+<p>
+Sed eget erat a magna mattis ultricies. Phasellus nibh massa, lacinia at augue eget, fermentum mattis augue. Duis ac fermentum libero. In et mattis ipsum, at rutrum dolor. Ut metus orci, mattis a placerat vel, elementum nec enim. Nulla iaculis maximus sapien, nec placerat orci consequat ac. Phasellus rhoncus lorem at pharetra molestie. Donec mollis quam vel nibh volutpat pellentesque. Proin dapibus metus efficitur sapien ornare tempus. Maecenas consectetur, nisl semper ornare interdum, quam leo laoreet turpis, non rhoncus turpis odio et ante.
+</p>
+
+<script>
+// TODO:
+// Make each p appear every 3 seconds
+// http://www.w3schools.com/js/js_timing.asp
+var p = document.getElementsByTagName('p');
+var x = 0;
+setInterval(function(){
+  if (x < p.length){
+    p[x].style.display = "block";
+    x++;
+  }
+}, 3000);
+</script>
+</body>
+</html>

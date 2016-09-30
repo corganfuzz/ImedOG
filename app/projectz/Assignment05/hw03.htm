@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw03</title>
+<style>
+p {
+	display: none;
+}
+</style>
+</head>
+<body>
+
+<h1>My Content</h1>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula malesuada congue. Cras metus orci, aliquam a sodales quis, cursus in leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc gravida, lacus et euismod iaculis, nunc eros ornare ipsum, non convallis nunc arcu a nisi. Quisque pharetra lorem ut tortor scelerisque, aliquam accumsan orci molestie. In vestibulum, quam quis rhoncus tristique, turpis nisl viverra augue, id aliquet libero eros nec libero. Donec tempus blandit commodo. Integer sagittis, velit ut elementum tempus, ex justo molestie justo, in tincidunt dolor dolor vel lectus. In laoreet at ex euismod dictum. Suspendisse erat ante, commodo ut dapibus rutrum, facilisis at ipsum. Proin urna lectus, posuere eget efficitur non, ultrices nec magna. Curabitur eu sapien quis orci dictum placerat. Nam non ligula viverra, imperdiet neque ac, fringilla neque. Etiam et justo ac lacus sollicitudin rhoncus. Donec commodo ipsum mauris, vel egestas felis molestie tincidunt.
+</p>
+
+<script>
+// TODO:
+// Make Paragraph appear after 3 seconds
+// http://www.w3schools.com/js/js_timing.asp
+
+var p = document.getElementsByTagName('p');
+var x = 0;
+setInterval(function(){
+  if (x < p.length){
+    p[x].style.display = "block";
+  }
+}, 3000);
+
+
+</script>
+
+
+
+</body>
+</html>

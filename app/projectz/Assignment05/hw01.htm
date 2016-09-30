@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw01.htm</title>
+<!--
+
+INSTRUCTIONS:
+	1.  Add JavaScript to create the following array of 10 items.  Name the array shoppingList:
+		- Apple Watch
+		- Apple iPad Pro
+		- Apple iPhone6s
+		- Bose Speakers
+		- Brother MFC Printer
+		- Xbox 360
+		- Amazon Echo
+		- Canon EOS Rebel T5
+		- Schwinn Speed Cruiser Bike
+		- JavaScript & jQuery textbook
+
+	2.  Create a for() loop that displays each array item, one at a time, within the <ul></ul> tag with the id "list".
+	3.  Use the concatenate operator (+) and compound concatenate operator (+=) to join the string of <li></li> tags with the item names within them.
+	4.  Use the .innerHTML property to add the values to the <ul>.
+	5.  You will need to create any additional strings, if necessary.  Each value should display on a separate line since you are using <li> tags.
+	6.  Outside of the for() loop, use the push() method to add 2 new items (of your choosing) to the array.  You should have a total of 12 items.
+
+	Reference:
+
+	http://www.w3schools.com/js/js_arrays.asp
+	http://www.w3schools.com/js/js_array_methods.asp
+
+//-->
+</head>
+
+<body>
+
+<h1>Array Assignment 1</h1>
+
+<h2>Shopping List</h2>
+
+<ul id="list">
+</ul>
+
+
+<script>
+// INSERT JAVASCRIPT CODE HERE
+
+  var shoppingList = [
+    "Apple Watch",
+    "Apple iPad Pro",
+    "Apple iPhone6s",
+    "Bose Speakers",
+    "Brother MFC Printer",
+    "Xbox 360",
+    "Amazon Echo",
+    "Canon EOS Rebel T5",
+    "Schwinn Speed Cruiser Bike",
+    "JavaScript & jQuery textbook"];
+
+  shoppingList.push("Note 7");
+  shoppingList.push("Old Android Phone");
+  sLen = shoppingList.length;
+
+var text = "";
+    for (var i=0; i<sLen; i++) {
+
+      text += "<li>" + shoppingList[i] + "</li>";
+      document.getElementById("list").innerHTML = text;
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>
