@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw01</title>
+<!--
+INSTRUCTIONS:
+
+1.  Create JavaScript code that will use the .onclick event and display an alert() box with the color name from inside the div.
+2.  Attach an .onclick event to each <div>
+3.  When the user clicks on a colored box (red, blue, green), an alert() box will display.
+4.  The content of the alert() box will be the text from between the clicked <div> tags.
+5.  Use unobtrusive JavaScript.
+
+References:
+
+http://www.w3schools.com/js/js_events.asp
+http://www.w3schools.com/js/js_htmldom_events.asp
+
+
+//-->
+
+<style>
+div {
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	margin-right: 10px;
+	line-height: 100px;
+}
+#box1 {
+	background-color: red;
+	float: left;
+}
+#box2 {
+	background-color: blue;
+	float: left;
+}
+#box3 {
+	background-color: green;
+	float: left;
+}
+p {
+	clear: both;
+}
+</style>
+</head>
+<body>
+
+<h1>Colored Boxes - Part 1</h1>
+
+<div id="box1">Red</div>
+
+<div id="box2">Blue</div>
+
+<div id="box3">Green</div>
+
+<p id="text"></p>
+
+<!-- INSERT JAVASCRIPT CODE HERE -->
+<script>
+
+  var box1 = document.getElementById("box1");
+  var box2 = document.getElementById("box2");
+  var box3 = document.getElementById("box3");
+
+
+ box1.onclick = function () {
+   alert(box1.textContent);
+ }
+
+ box2.onclick = function () {
+   alert(box2.textContent);
+ }
+
+ box3.onclick = function () {
+   alert(box3.textContent);
+ }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

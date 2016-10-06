@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw02</title>
+<!--
+INSTRUCTIONS:
+
+1.  Create JavaScript code that will use the .onmouseover event and display the color name inside the <div>
+2.  Attach an .onmouseover event to each <div>
+3.  When the user mouses-over a colored box (red, blue, green), the name of the color will display.
+4.  Use unobtrusive JavaScript.
+
+BONUS:
+- Make the text go away when you .onmouseout of the colored box
+- Add a fourth box with a different color, attach the JavaScript events to it and repeat the process.
+
+//-->
+
+<style>
+div {
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	margin-right: 10px;
+	line-height: 100px;
+}
+#box1 {
+	background-color: red;
+	float: left;
+}
+#box2 {
+	background-color: blue;
+	float: left;
+}
+#box3 {
+	background-color: green;
+	float: left;
+}
+p {
+	clear: both;
+}
+.box {
+	display: none;
+}
+</style>
+</head>
+<body>
+
+<h1>Colored Boxes - Part 2</h1>
+
+<div id="box1"></div>
+
+<div id="box2"></div>
+
+<div id="box3"></div>
+
+<p id="text"></p>
+
+<!-- INSERT JAVASCRIPT CODE HERE -->
+<script>
+  var box1 = document.getElementById("box1");
+  var box2 = document.getElementById("box2");
+  var box3 = document.getElementById("box3");
+
+  box1.onmouseover = function () {
+    box1.textContent = "Red";
+  };
+
+  box1.onmouseout = function () {
+    box1.textContent = "";
+  };
+
+      box2.onmouseover = function () {
+        box2.textContent = "Blue";
+      };
+      box2.onmouseout = function () {
+        box2.textContent = "";
+      };
+
+
+        box3.onmouseover = function () {
+          box3.textContent = "Green";
+        };
+        box3.onmouseout = function () {
+          box3.textContent = "";
+        };
+
+
+
+</script>
+
+</body>
+</html>
