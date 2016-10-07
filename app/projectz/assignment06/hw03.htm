@@ -60,23 +60,53 @@ p {
   var box2 = document.getElementById("box2");
   var box3 = document.getElementById("box3");
 
-  box1.onclick = function () {
-    box1.style.backgroundColor = "green";
-    box1.textContent = "Green";
-  };
+
+    document.getElementById("box1").onclick = function () {
+
+      if (this.textContent == "Red") {
+        this.style.backgroundColor = "green";
+        this.textContent = "Green";
+      }
+
+      else {
+        this.innerHTML = "Red";
+        this.style.backgroundColor = "Red";
+
+      }
+
+    }
+
+  document.getElementById("box2").onclick = function () {
+
+    if (this.textContent == "White") {
+      this.style.backgroundColor = "black";
+      this.textContent = "Black";
+    }
+
+    else {
+      this.innerHTML = "White";
+      this.style.backgroundColor = "White";
+
+    }
+
+  }
+
+  document.getElementById("box3").onclick = function () {
+
+    if (this.textContent == "Blue") {
+      this.style.backgroundColor = "yellow";
+      this.textContent = "Yellow";
+    }
+
+    else {
+      this.innerHTML = "Blue";
+      this.style.backgroundColor = "Blue";
+
+    }
+
+  }
 
 
-  box2.onclick = function () {
-    box2.style.backgroundColor = "black";
-    box2.style.color = "white";
-    box2.textContent = "Black";
-  };
-
-
-  box3.onclick = function () {
-    box3.style.backgroundColor = "yellow";
-    box3.textContent = "Yellow";
-  };
 
 
 
