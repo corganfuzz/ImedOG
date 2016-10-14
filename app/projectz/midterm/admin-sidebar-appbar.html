@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link href="https://cdn.rawgit.com/olton/Metro-UI-CSS/develop/build/css/metro.min.css" rel="stylesheet">
+    <!--<script src="jquery.js"></script>-->
+    <script src="https://cdn.rawgit.com/olton/Metro-UI-CSS/develop/build/js/metro.min.js"></script>
+</head>
+<body>
+
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+
+        <!-- Text input-->
+        <div class="cell">
+            <label>Email</label>
+            <div class="input-control text full-size" for="Email">
+                <input id="Email" name="Email" type="text" placeholder="Enter your email here" >
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="cell">
+            <label >Phone</label>
+            <div class="input-control text full-size" for="Phone">
+                <input id="Phone" name="Phone" type="text" placeholder="Enter your phone here">
+            </div>
+        </div>
+
+        <!-- Multiple Radios -->
+
+        <div class="cell">
+            <h5>Favorite Pets</h5>
+            <label class="input-control radio">
+                <input type="radio" name="FavoritePets" checked>
+                <span class="check"></span>
+                <span class="caption">Cats</span>
+            </label>
+            <label class="input-control radio">
+                <input type="radio" name="FavoritePets">
+                <span class="check"></span>
+                <span class="caption">Dogs</span>
+            </label>
+            <label class="input-control radio">
+                <input type="radio" name="FavoritePets">
+                <span class="check"></span>
+                <span class="caption">Birds</span>
+            </label>
+
+            <!--<label class="input-control radio" >Favorite Pets-->
+            <!--<input type="radio" name="FavoritePets" id="FavoritePets-0" value="Cats" checked="checked">-->
+            <!--Cats-->
+            <!--<input type="radio" name="FavoritePets" id="FavoritePets-1" value="Dogs">-->
+            <!--Dogs-->
+            <!--<input type="radio" name="FavoritePets" id="FavoritePets-2" value="Birds">-->
+            <!--Birds-->
+            <!--</label>-->
+        </div>
+
+
+        <!-- Text input-->
+        <div class="cell">
+            <label>Pet Name: #N</label>
+            <div class="input-control text full-size" for="PetName">
+                <input id="petNames" name="petNames" type="text" placeholder="type your pet name" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="cell">
+            <h5>How many pets do you have?</h5>
+            <div class="input-control select full-size">
+                <select id="petsNumber" name="petsNumber">
+                    <option value="None">None</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Multiple Checkboxes -->
+        <h5>Interests</h5>
+        <div class="cell">
+            <label class="input-control checkbox">
+                <input type="checkbox" >
+                <span class="check"></span>
+                <span class="caption">None</span>
+            </label><br/>
+            <label class="input-control checkbox">
+                <input type="checkbox" >
+                <span class="check"></span>
+                <span class="caption">Walking</span>
+            </label><br/>
+            <label class="input-control checkbox">
+                <input type="checkbox" >
+                <span class="check"></span>
+                <span class="caption">Running</span>
+            </label><br/>
+            <label class="input-control checkbox">
+                <input type="checkbox" >
+                <span class="check"></span>
+                <span class="caption">Swimming</span>
+            </label><br/>
+            <label class="input-control checkbox">
+                <input type="checkbox" >
+                <span class="check"></span>
+                <span class="caption">Biking</span>
+            </label><br/>
+            <label class="input-control checkbox">
+                <input type="checkbox" >
+                <span class="check"></span>
+                <span class="caption">Other</span>
+            </label> <input id="OtherInt" name="OtherInt" type="text" placeholder="type other interests here" class="input-control text">
+            <!--<label class="col-md-4 control-label" for="Interests">Interests</label>-->
+            <!--<div class="col-md-4">-->
+            <!--<div class="checkbox">-->
+            <!--<label for="Interests-0">-->
+            <!--<input type="checkbox" name="Interests" id="Interests-0" value="None">-->
+            <!--None-->
+            <!--</label>-->
+            <!--</div>-->
+            <!--<div class="checkbox">-->
+            <!--<label for="Interests-1">-->
+            <!--<input type="checkbox" name="Interests" id="Interests-1" value="Walking">-->
+            <!--Walking-->
+            <!--</label>-->
+            <!--</div>-->
+            <!--<div class="checkbox">-->
+            <!--<label for="Interests-2">-->
+            <!--<input type="checkbox" name="Interests" id="Interests-2" value="Running">-->
+            <!--Running-->
+            <!--</label>-->
+            <!--</div>-->
+            <!--<div class="checkbox">-->
+            <!--<label for="Interests-3">-->
+            <!--<input type="checkbox" name="Interests" id="Interests-3" value="Swimming">-->
+            <!--Swimming-->
+            <!--</label>-->
+            <!--</div>-->
+            <!--<div class="checkbox">-->
+            <!--<label for="Interests-4">-->
+            <!--<input type="checkbox" name="Interests" id="Interests-4" value="Biking">-->
+            <!--Biking-->
+            <!--</label>-->
+            <!--</div>-->
+            <!--<div class="checkbox">-->
+            <!--<label for="Interests-5">-->
+            <!--<input type="checkbox" name="Interests" id="Interests-5" value="Other">-->
+            <!--Other-->
+            <!--</label>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+
+
+        <!-- Textarea -->
+        <div class="cell">
+            <h5>Comments</h5>
+            <div class="input-control textarea full-size" >
+                <textarea id="Comments" name="Comments"></textarea>
+            </div>
+        </div>
+
+        <!-- Multiple Checkboxes -->
+        <div class="cell">
+            <label class="input-control checkbox">
+                <input type="checkbox" value="Yes" >
+                <span class="check"></span>
+                <span class="caption">I agree to the terms of the site</span>
+            </label>
+        </div>
+
+        <!-- Button -->
+        <div class="cell">
+
+            <button id="Submit" name="Submit" class="button primary">Submit</button>
+
+        </div>
+
+    </fieldset>
+</form>
+
+
+</body>
+</html>

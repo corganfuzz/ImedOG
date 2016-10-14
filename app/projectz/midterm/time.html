@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Difference</title>
+    <!--
+    CLASS EXAMPLE:
+    Display the difference between 2 dates in (Days, Weeks, Months)
+    
+    THIS IS THE HTML ONLY VERSION
+    //-->
+</head>
+
+<body>
+
+<h1>JavaScript Dates</h1>
+
+<div>
+    <h2>Start Date</h2>
+    <p id="StartDate"></p>
+</div>
+
+<div>
+    <h2>End Date</h2>
+    <p id="EndDate"></p>
+</div>
+
+<div>
+    <h2>Difference</h2>
+    <p id="DateDiff"></p>
+</div>
+
+<script>
+    // Add JavaScript here
+
+    var today = new Date();
+    document.getElementById("StartDate").innerHTML = today;
+
+    var halloween = new Date("12/11/2016");
+    document.getElementById("EndDate").innerHTML =halloween;
+
+    var timeDiff = Math.abs(halloween.getTime() - today.getTime());
+    document.getElementById("DateDiff").innerHTML = timeDiff;
+
+    var diffDays = timeDiff / (1000 * 60 * 60 * 24);
+
+    diffDays = Math.floor(diffDays);
+
+    document.getElementById("DateDiff").innerHTML=diffDays;
+</script>
+
+</body>
+</html>

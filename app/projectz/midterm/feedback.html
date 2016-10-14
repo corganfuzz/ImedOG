@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+
+
+    <title>IT Server Events</title>
+
+    <link href="https://cdn.rawgit.com/olton/Metro-UI-CSS/develop/build/css/metro.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <link href="https://cdn.rawgit.com/olton/Metro-UI-CSS/master/build/css/metro-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/olton/Metro-UI-CSS/master/build/css/metro-responsive.min.css" rel="stylesheet">
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+
+        .page-content {
+            padding-top: 3.125rem;
+            /*min-height: 100%;*/
+            /*height: 100%;*/
+        }
+
+
+        @media screen and (max-width: 800px){
+            #cell-sidebar {
+                flex-basis: 52px;
+            }
+            #cell-content {
+                flex-basis: calc(100% - 52px);
+            }
+        }
+
+    </style>
+
+    <!--<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>-->
+    <!--<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>-->
+    <!--<script src="https://cdn.rawgit.com/olton/Metro-UI-CSS/develop/build/js/metro.min.js"></script>-->
+
+    <script>
+        //        function pushMessage(t){
+        //            var mes = 'Info|Implement independently';
+        //            $.Notify({
+        //                caption: mes.split("|")[0],
+        //                content: mes.split("|")[1],
+        //                type: t
+        //            });
+        //        }
+        //
+        //        $(function(){
+        //            $('.sidebar').on('click', 'li', function(){
+        //                if (!$(this).hasClass('active')) {
+        //                    $('.sidebar li').removeClass('active');
+        //                    $(this).addClass('active');
+        //                }
+        //            })
+        //        })
+    </script>
+</head>
+<body class="bg-steel">
+<div class="app-bar fixed-top darcula" data-role="appbar">
+    <a class="app-bar-element branding"><h2><b>GRX</b></h2></a>
+    <span class="app-bar-divider"></span>
+    <ul class="app-bar-menu">
+        <li><a href="">Dashboard</a></li>
+        <li>
+            <a href="" class="dropdown-toggle">Project</a>
+            <ul class="d-menu" data-role="dropdown">ƒ
+                <li><a href="">New project</a></li>
+                <li class="divider"></li>
+                <li>
+                    <a href="" class="dropdown-toggle">Reopen</a>
+                    <ul class="d-menu" data-role="dropdown">
+                        <li><a href="">Project 1</a></li>
+                        <li><a href="">Project 2</a></li>
+                        <li><a href="">Project 3</a></li>
+                        <li class="divider"></li>
+                        <li><a href="">Clear list</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li></li>
+        <li>
+            <!--<a href="" class="dropdown-toggle">Help</a>-->
+            <!--<ul class="d-menu" data-role="dropdown">-->
+                <!--<li><a href="">ChatOn</a></li>-->
+                <!--<li><a href="">Community support</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><a href="">About</a></li>-->
+            <!--</ul>-->
+        </li>
+    </ul>
+
+    <div class="app-bar-element place-right">
+        <span class="dropdown-toggle"><span class="mif-cog"></span> User Name</span>
+        <div class="app-bar-drop-container padding10 place-right no-margin-top block-shadow fg-dark" data-role="dropdown" data-no-close="true" style="width: 220px">
+            <h2 class="text-light">Quick settings</h2>
+            <ul class="unstyled-list fg-dark">
+                <li><a href="" class="fg-white1 fg-hover-yellow">Profile</a></li>
+                <li><a href="" class="fg-white2 fg-hover-yellow">Security</a></li>
+                <li><a href="" class="fg-white3 fg-hover-yellow">Exit</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="page-content">
+    <div class="flex-grid no-responsive-future" style="height: 100%;">
+        <div class="row" style="height: 100%">
+            <div class="cell size-x200" id="cell-sidebar" style="background-color: #009cde;">
+                <ul class="sidebar">
+                    <li><a href="#">
+                        <span class="mif-apps icon"></span>
+                        <span class="title">all items</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-vpn-publ icon"></span>
+                        <span class="title">websites</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="index.html">
+                        <span class="mif-drive-eta icon"></span>
+                        <span class="title">IT Server Events</span>
+                        <span class="counter">2</span>
+                    </a></li>
+                    <li class="active"><a href="feedback.html">
+                        <span class="mif-cloud icon"></span>
+                        <span class="title">Feedback Form</span>
+                        <span class="counter">1</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-database icon"></span>
+                        <span class="title">SQL Databases</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-cogs icon"></span>
+                        <span class="title">Automation</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="mif-apps icon"></span>
+                        <span class="title">all items</span>
+                        <span class="counter">0</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="cell auto-size padding20 bg-white" id="cell-content">
+
+                <h1 class="text-light">Feedback  <span class="mif-bubbles place-right"></span></h1>
+                <hr class="thin bg-grayLighter">
+                <!--<button class="button primary" onclick="pushMessage('info')"><span class="mif-plus"></span> Create...</button>-->
+                <!--<button class="button success" onclick="pushMessage('success')"><span class="mif-play"></span> Start</button>-->
+                <!--<button class="button warning" onclick="pushMessage('warning')"><span class="mif-loop2"></span> Restart</button>-->
+                <!--<button class="button alert" onclick="pushMessage('alert')">Stop all machines</button>-->
+                <!--<hr class="thin bg-grayLighter">-->
+                <!--<table class="dataTable border bordered" data-role="datatable" data-auto-width="false">-->
+                <!--<thead>-->
+                <!--<tr>-->
+                <!--<td style="width: 20px">-->
+                <!--</td>-->
+                <!--<td class="sortable-column sort-asc" style="width: 100px">ID</td>-->
+                <!--<td class="sortable-column">Machine name</td>-->
+                <!--<td class="sortable-column">Address</td>-->
+                <!--<td class="sortable-column" style="width: 20px">Status</td>-->
+                <!--<td style="width: 20px">Switch</td>-->
+                <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody>-->
+                <!--<tr>-->
+                <!--<td>-->
+                <!--<label class="input-control checkbox small-check no-margin">-->
+                <!--<input type="checkbox">-->
+                <!--<span class="check"></span>-->
+                <!--</label>-->
+                <!--</td>-->
+                <!--<td>123890723212</td>-->
+                <!--<td>Machine number 1</td>-->
+                <!--<td><a href="http://virtuals.com/machines/123890723212">link</a></td>-->
+                <!--<td class="align-center"><span class="mif-checkmark fg-green"></span></td>-->
+                <!--<td>-->
+                <!--<label class="switch-original">-->
+                <!--<input type="checkbox" checked>-->
+                <!--<span class="check"></span>-->
+                <!--</label>-->
+                <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>-->
+                <!--<label class="input-control checkbox small-check no-margin">-->
+                <!--<input type="checkbox">-->
+                <!--<span class="check"></span>-->
+                <!--</label>-->
+                <!--</td>-->
+                <!--<td>123890723212</td>-->
+                <!--<td>Machine number 2</td>-->
+                <!--<td><a href="http://virtuals.com/machines/123890723212">link</a></td>-->
+                <!--<td class="align-center"><span class="mif-stop fg-red"></span></td>-->
+                <!--<td>-->
+                <!--<label class="switch-original">-->
+                <!--<input type="checkbox">-->
+                <!--<span class="check"></span>-->
+                <!--</label>-->
+                <!--</td>-->
+                <!--</tr>-->
+                <!--</tbody>-->
+                <!--</table>-->
+                <form>
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <!--<legend>Form Name</legend>-->
+
+                        <!-- Text input-->
+                        <br/>
+                        <div class="cell">
+                            <label>Email</label>
+                            <div class="input-control text full-size" for="Email">
+                                <input id="Email" name="Email" type="text" placeholder="Enter your email here" >
+                            </div>
+                        </div><br/>
+
+                        <!-- Text input-->
+                        <div class="cell">
+                            <label >Phone</label>
+                            <div class="input-control text full-size" for="Phone">
+                                <input id="Phone" name="Phone" type="text" placeholder="Enter your phone here">
+                            </div>
+                        </div><br/>
+
+                        <!-- Multiple Radios -->
+
+                        <div class="cell">
+                            <label>Favorite Pets</label><br/>
+                            <label class="input-control radio">
+                                <input type="radio" name="FavoritePets" checked>
+                                <span class="check"></span>
+                                <span class="caption">Cats</span>
+                            </label>
+                            <label class="input-control radio">
+                                <input type="radio" name="FavoritePets">
+                                <span class="check"></span>
+                                <span class="caption">Dogs</span>
+                            </label>
+                            <label class="input-control radio">
+                                <input type="radio" name="FavoritePets">
+                                <span class="check"></span>
+                                <span class="caption">Birds</span>
+                            </label><br/>
+
+                            <!--<label class="input-control radio" >Favorite Pets-->
+                            <!--<input type="radio" name="FavoritePets" id="FavoritePets-0" value="Cats" checked="checked">-->
+                            <!--Cats-->
+                            <!--<input type="radio" name="FavoritePets" id="FavoritePets-1" value="Dogs">-->
+                            <!--Dogs-->
+                            <!--<input type="radio" name="FavoritePets" id="FavoritePets-2" value="Birds">-->
+                            <!--Birds-->
+                            <!--</label>-->
+                        </div><br/>
+
+
+                        <!-- Text input-->
+                        <div class="cell">
+                            <label>Pet Name: #N</label>
+                            <div class="input-control text full-size" for="PetName">
+                                <input id="petNames" name="petNames" type="text" placeholder="Type your pet name" class="form-control input-md">
+                            </div>
+                        </div><br/>
+
+                        <!-- Select Basic -->
+                        <div class="cell">
+                            <label>How many pets do you have?</label><br/>
+                            <div class="input-control select full-size">
+                                <select id="petsNumber" name="petsNumber">
+                                    <option value="None">None</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div><br/>
+
+                        <!-- Multiple Checkboxes -->
+                        <label>Interests</label><br/>
+                        <div class="cell">
+                            <label class="input-control checkbox">
+                                <input type="checkbox" >
+                                <span class="check"></span>
+                                <span class="caption">None</span>
+                            </label><br/>
+                            <label class="input-control checkbox">
+                                <input type="checkbox" >
+                                <span class="check"></span>
+                                <span class="caption">Walking</span>
+                            </label><br/>
+                            <label class="input-control checkbox">
+                                <input type="checkbox" >
+                                <span class="check"></span>
+                                <span class="caption">Running</span>
+                            </label><br/>
+                            <label class="input-control checkbox">
+                                <input type="checkbox" >
+                                <span class="check"></span>
+                                <span class="caption">Swimming</span>
+                            </label><br/>
+                            <label class="input-control checkbox">
+                                <input type="checkbox" >
+                                <span class="check"></span>
+                                <span class="caption">Biking</span>
+                            </label><br/>
+                            <label class="input-control checkbox">
+                                <input type="checkbox" >
+                                <span class="check"></span>
+                                <span class="caption">Other</span>
+                            </label> <input id="OtherInt" name="OtherInt" type="text" placeholder="type other interests here" class="input-control text">
+                            <br/><br/>
+
+                        </div>
+
+
+                        <!-- Textarea -->
+                        <div class="cell">
+                            <label>Comments</label><br/>
+                            <div class="input-control textarea full-size" >
+                                <textarea id="Comments" name="Comments"></textarea>
+                            </div>
+                        </div><br/>
+
+                        <!-- Multiple Checkboxes -->
+                        <div class="cell">
+                            <label class="input-control checkbox">
+                                <input type="checkbox" value="Yes" >
+                                <span class="check"></span>
+                                <span class="caption">I agree to the terms of the site</span>
+                            </label>
+                        </div><br/>
+
+                        <!-- Button -->
+                        <div class="cell">
+
+                            <button id="Submit" name="Submit" class="button primary">Submit</button>
+
+                        </div>
+
+                    </fieldset>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

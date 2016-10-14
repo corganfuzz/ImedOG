@@ -1,0 +1,42 @@
+
+.app-bar .app-bar-element.branding {
+
+  background-color: #D9291C;
+
+}
+
+.app-bar {
+  /*background-color: #58595b;*/
+  background-color: #3F4041;
+}
+
+.sidebar, .sidebar-container {
+  background-color: #009cde;
+}
+
+span.place-right.button.loading-pulse.lighten.primary {
+  padding-top: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+p.news {
+  padding-left: 25px;
+}
+
+.panel>.content {
+  background-color: #F8FBFF;
+}
+
+.panel>.heading {
+  background-color: #009cde;
+}
+
+/*div#cell-content {*/
+  /*padding-bottom: 100%;*/
+/*}*/
+
+
+
