@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta chsuccessfully8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -38,31 +38,16 @@
             }
         }
 
+        div#cell-content {
+            padding-bottom: 100%;
+        }
     </style>
 
     <!--<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>-->
     <!--<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>-->
     <!--<script src="https://cdn.rawgit.com/olton/Metro-UI-CSS/develop/build/js/metro.min.js"></script>-->
 
-    <script>
-        //        function pushMessage(t){
-        //            var mes = 'Info|Implement independently';
-        //            $.Notify({
-        //                caption: mes.split("|")[0],
-        //                content: mes.split("|")[1],
-        //                type: t
-        //            });
-        //        }
-        //
-        //        $(function(){
-        //            $('.sidebar').on('click', 'li', function(){
-        //                if (!$(this).hasClass('active')) {
-        //                    $('.sidebar li').removeClass('active');
-        //                    $(this).addClass('active');
-        //                }
-        //            })
-        //        })
-    </script>
+
 </head>
 <body class="bg-steel">
 <div class="app-bar fixed-top darcula" data-role="appbar">
@@ -90,13 +75,7 @@
         <li></li>
         <li></li>
         <li>
-            <!--<a href="" class="dropdown-toggle">Help</a>-->
-            <!--<ul class="d-menu" data-role="dropdown">-->
-                <!--<li><a href="">ChatOn</a></li>-->
-                <!--<li><a href="">Community support</a></li>-->
-                <!--<li class="divider"></li>-->
-                <!--<li><a href="">About</a></li>-->
-            <!--</ul>-->
+
         </li>
     </ul>
 
@@ -159,63 +138,8 @@
 
                 <h1 class="text-light">Feedback  <span class="mif-bubbles place-right"></span></h1>
                 <hr class="thin bg-grayLighter">
-                <!--<button class="button primary" onclick="pushMessage('info')"><span class="mif-plus"></span> Create...</button>-->
-                <!--<button class="button success" onclick="pushMessage('success')"><span class="mif-play"></span> Start</button>-->
-                <!--<button class="button warning" onclick="pushMessage('warning')"><span class="mif-loop2"></span> Restart</button>-->
-                <!--<button class="button alert" onclick="pushMessage('alert')">Stop all machines</button>-->
-                <!--<hr class="thin bg-grayLighter">-->
-                <!--<table class="dataTable border bordered" data-role="datatable" data-auto-width="false">-->
-                <!--<thead>-->
-                <!--<tr>-->
-                <!--<td style="width: 20px">-->
-                <!--</td>-->
-                <!--<td class="sortable-column sort-asc" style="width: 100px">ID</td>-->
-                <!--<td class="sortable-column">Machine name</td>-->
-                <!--<td class="sortable-column">Address</td>-->
-                <!--<td class="sortable-column" style="width: 20px">Status</td>-->
-                <!--<td style="width: 20px">Switch</td>-->
-                <!--</tr>-->
-                <!--</thead>-->
-                <!--<tbody>-->
-                <!--<tr>-->
-                <!--<td>-->
-                <!--<label class="input-control checkbox small-check no-margin">-->
-                <!--<input type="checkbox">-->
-                <!--<span class="check"></span>-->
-                <!--</label>-->
-                <!--</td>-->
-                <!--<td>123890723212</td>-->
-                <!--<td>Machine number 1</td>-->
-                <!--<td><a href="http://virtuals.com/machines/123890723212">link</a></td>-->
-                <!--<td class="align-center"><span class="mif-checkmark fg-green"></span></td>-->
-                <!--<td>-->
-                <!--<label class="switch-original">-->
-                <!--<input type="checkbox" checked>-->
-                <!--<span class="check"></span>-->
-                <!--</label>-->
-                <!--</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                <!--<td>-->
-                <!--<label class="input-control checkbox small-check no-margin">-->
-                <!--<input type="checkbox">-->
-                <!--<span class="check"></span>-->
-                <!--</label>-->
-                <!--</td>-->
-                <!--<td>123890723212</td>-->
-                <!--<td>Machine number 2</td>-->
-                <!--<td><a href="http://virtuals.com/machines/123890723212">link</a></td>-->
-                <!--<td class="align-center"><span class="mif-stop fg-red"></span></td>-->
-                <!--<td>-->
-                <!--<label class="switch-original">-->
-                <!--<input type="checkbox">-->
-                <!--<span class="check"></span>-->
-                <!--</label>-->
-                <!--</td>-->
-                <!--</tr>-->
-                <!--</tbody>-->
-                <!--</table>-->
-                <form>
+<div id="contentcop">
+                <form >
                     <fieldset>
 
                         <!-- Form Name -->
@@ -224,9 +148,18 @@
                         <!-- Text input-->
                         <br/>
                         <div class="cell">
+                            <label>Name</label>
+                            <div class="input-control text full-size" for="Name">
+                                <input id="Name" name="Name" type="text" placeholder="Enter your name here">
+                                <small id="errorName" class="errorText"></small>
+                            </div>
+                        </div><br/>
+
+                        <div class="cell">
                             <label>Email</label>
                             <div class="input-control text full-size" for="Email">
-                                <input id="Email" name="Email" type="text" placeholder="Enter your email here" >
+                                <input id="Email" name="Email" type="text" placeholder="Enter your email here">
+                                <small id="errorEmail" class="errorText"></small>
                             </div>
                         </div><br/>
 
@@ -235,37 +168,32 @@
                             <label >Phone</label>
                             <div class="input-control text full-size" for="Phone">
                                 <input id="Phone" name="Phone" type="text" placeholder="Enter your phone here">
+                                <small id="errorPhone" class="errorText"></small>
                             </div>
                         </div><br/>
 
                         <!-- Multiple Radios -->
 
                         <div class="cell">
-                            <label>Favorite Pets</label><br/>
+                            <label >Select a favorite Pet</label><br/>
                             <label class="input-control radio">
-                                <input type="radio" name="FavoritePets" checked>
+                                <input type="radio" name="favpet" id="fav_cats" value="Cats">
                                 <span class="check"></span>
                                 <span class="caption">Cats</span>
                             </label>
                             <label class="input-control radio">
-                                <input type="radio" name="FavoritePets">
+                                <input type="radio" name="favpet" id="fav_dogs" value="Dogs">
                                 <span class="check"></span>
                                 <span class="caption">Dogs</span>
                             </label>
                             <label class="input-control radio">
-                                <input type="radio" name="FavoritePets">
+                                <input type="radio" name="favpet" id="fav_birds" value="Birds">
                                 <span class="check"></span>
                                 <span class="caption">Birds</span>
-                            </label><br/>
+                            </label>
+                            <small id="errorFavPet" class="errorText"></small>
 
-                            <!--<label class="input-control radio" >Favorite Pets-->
-                            <!--<input type="radio" name="FavoritePets" id="FavoritePets-0" value="Cats" checked="checked">-->
-                            <!--Cats-->
-                            <!--<input type="radio" name="FavoritePets" id="FavoritePets-1" value="Dogs">-->
-                            <!--Dogs-->
-                            <!--<input type="radio" name="FavoritePets" id="FavoritePets-2" value="Birds">-->
-                            <!--Birds-->
-                            <!--</label>-->
+
                         </div><br/>
 
 
@@ -289,6 +217,22 @@
                                     <option value="4">4</option>
                                     <option value="5">5</option>
                                 </select>
+                            </div>
+
+                            <div class="input-control text full-size" for="petname1">
+                                <input id="pet1" name="pet1" type="text" placeholder="Type Pet Name #1" >
+                            </div>
+                            <div class="input-control text full-size" for="petname2">
+                                <input id="pet2" name="pet2" type="text" placeholder="Type Pet Name #2" >
+                            </div>
+                            <div class="input-control text full-size" for="petname3">
+                                <input id="pet3" name="pet3" type="text" placeholder="Type Pet Name #3" >
+                            </div>
+                            <div class="input-control text full-size" for="petname4">
+                                <input id="pet4" name="pet4" type="text" placeholder="Type Pet Name #4" >
+                            </div>
+                            <div class="input-control text full-size" for="petname5">
+                                <input id="pet5" name="pet5" type="text" placeholder="Type Pet Name #5" >
                             </div>
                         </div><br/>
 
@@ -335,33 +279,159 @@
                             <label>Comments</label><br/>
                             <div class="input-control textarea full-size" >
                                 <textarea id="Comments" name="Comments"></textarea>
+                                <small id="errorComments" class="errorText"></small>
                             </div>
                         </div><br/>
 
                         <!-- Multiple Checkboxes -->
                         <div class="cell">
                             <label class="input-control checkbox">
-                                <input type="checkbox" value="Yes" >
+                                <input type="checkbox" name="remember" id="agreement" value="1" />
                                 <span class="check"></span>
                                 <span class="caption">I agree to the terms of the site</span>
+                                <small id="errorAgree" class="errorText"></small>
                             </label>
                         </div><br/>
 
                         <!-- Button -->
                         <div class="cell">
 
-                            <button id="Submit" name="Submit" class="button primary">Submit</button>
+                            <input type="button" id="inputSubmit" value="Submit" class="button primary">
 
                         </div>
 
                     </fieldset>
                 </form>
 
-
+</div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+document.getElementById("inputSubmit").onclick = function () {
+
+    var isvalid = true;
+
+    //validate name
+
+    var name = document.getElementById("Name").value;
+
+    document.getElementById("errorName").innerHTML = "";
+    document.getElementById("Name").removeAttribute("class", "error");
+
+    if (name == '') {
+        document.getElementById("errorName").innerHTML = "Name is Required";
+        document.getElementById("Name").setAttribute("class", "error");
+        isvalid = false;
+        document.body.scrollLeft = 0;
+        document.body.scrollTop = 0;
+    }
+
+
+
+    //validate email
+
+    var email = document.getElementById("Email").value;
+
+    document.getElementById("errorEmail").innerHTML = "";
+    document.getElementById("Email").removeAttribute("class", "error");
+
+    if (email == '') {
+        document.getElementById("errorEmail").innerHTML = "Email is Required";
+        document.getElementById("Email").setAttribute("class", "error");
+        isvalid = false;
+        document.body.scrollLeft = 0;
+        document.body.scrollTop = 0;
+    }
+
+    // validate phone
+
+    var phone = document.getElementById("Phone").value;
+
+    document.getElementById("errorPhone").innerHTML = "";
+    document.getElementById("Phone").removeAttribute("class", "error");
+
+    if (phone == '') {
+        document.getElementById("errorPhone").innerHTML = "Phone is Required";
+        document.getElementById("Phone").setAttribute("class", "error");
+        isvalid = false;
+        document.body.scrollLeft = 0;
+        document.body.scrollTop = 0;
+    }
+
+    //validate favorite pet
+
+    var favpet = document.getElementsByName("favpet");
+
+    document.getElementById("errorFavPet").innerHTML = "";
+
+
+    if (favpet != null) {
+        var anychecked = -1;
+
+        for (var x = 0; x <= favpet.length-1; x++){
+            if (favpet[x].checked == true) {
+                anychecked = x;
+                x = 999;
+            }
+
+            if (anychecked == -1) {
+                document.getElementById("errorFavPet").innerHTML = " - You must select a pet";
+                isvalid = false;
+            }
+        }
+    }
+
+
+    //validate comments
+
+    var comments = document.getElementById("Comments").value;
+
+    document.getElementById("errorComments").innerHTML = "";
+    document.getElementById("Comments").removeAttribute("class", "error");
+
+    if (comments == '') {
+        document.getElementById("errorComments").innerHTML = "Comments are required";
+        document.getElementById("Comments").setAttribute("class", "error");
+        isvalid =false;
+
+    }
+
+// validate checkbox
+
+
+    var agreement = document.getElementById("agreement");
+    document.getElementById("errorAgree").innerHTML = "";
+    document.getElementById("agreement").removeAttribute("class", "error");
+
+    if (agreement.checked == false) {
+
+        document.getElementById("errorAgree").innerHTML = " - You must agree with the terms";
+        document.getElementById("agreement").setAttribute("class", "error");
+        isvalid = false;
+    }
+
+//    Thank you message
+
+
+if (isvalid == true) {
+
+    document.getElementById("contentcop").innerHTML = "<h4>" + "Thank you, the form has been successfully submitted" + "</h4>"
+    document.body.scrollLeft = 0;
+    document.body.scrollTop = 0;
+}
+
+
+};
+
+
+
+
+
+
+</script>
 
 </body>
 </html>

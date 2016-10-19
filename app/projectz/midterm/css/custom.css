@@ -38,5 +38,12 @@ p.news {
   /*padding-bottom: 100%;*/
 /*}*/
 
+.errorText {
+  color: red;
+}
+.errorCell {
+  background-color: yellow;
+}
+
 
 
