@@ -14,7 +14,7 @@
   background-color: #009cde;
 }
 
-span.place-right.button.loading-pulse.lighten.primary {
+span.place-right.button.loading-pulse.lighten.info {
   padding-top: 10px;
 }
 
@@ -27,7 +27,7 @@ p.news {
 }
 
 .panel>.content {
-  background-color: #F8FBFF;
+  background-color: #f4f4f4;
 }
 
 .panel>.heading {
@@ -43,6 +43,10 @@ p.news {
 }
 .errorCell {
   background-color: yellow;
+}
+
+fieldset {
+  background-color: #f4f4f4;
 }
 
 

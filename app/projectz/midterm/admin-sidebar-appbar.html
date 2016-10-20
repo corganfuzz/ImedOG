@@ -9,12 +9,12 @@
 </head>
 <body>
 
-
+<div class="grid">
 <form class="form-horizontal">
-    <fieldset>
+
 
         <!-- Form Name -->
-
+<div class="row cells2">
         <!-- Text input-->
         <div class="cell">
             <label>Email</label>
@@ -30,11 +30,11 @@
                 <input id="Phone" name="Phone" type="text" placeholder="Enter your phone here">
             </div>
         </div>
-
+</div>
         <!-- Multiple Radios -->
-
+<div class="row cells2">
         <div class="cell">
-            <h5>Favorite Pets</h5>
+            <label>Favorite Pets</label><br/>
             <label class="input-control radio">
                 <input type="radio" name="FavoritePets" checked>
                 <span class="check"></span>
@@ -51,14 +51,6 @@
                 <span class="caption">Birds</span>
             </label>
 
-            <!--<label class="input-control radio" >Favorite Pets-->
-            <!--<input type="radio" name="FavoritePets" id="FavoritePets-0" value="Cats" checked="checked">-->
-            <!--Cats-->
-            <!--<input type="radio" name="FavoritePets" id="FavoritePets-1" value="Dogs">-->
-            <!--Dogs-->
-            <!--<input type="radio" name="FavoritePets" id="FavoritePets-2" value="Birds">-->
-            <!--Birds-->
-            <!--</label>-->
         </div>
 
 
@@ -69,10 +61,11 @@
                 <input id="petNames" name="petNames" type="text" placeholder="type your pet name" class="form-control input-md">
             </div>
         </div>
-
+</div>
+<div class="row cells2">
         <!-- Select Basic -->
         <div class="cell">
-            <h5>How many pets do you have?</h5>
+            <label>How many pets do you have?</label>
             <div class="input-control select full-size">
                 <select id="petsNumber" name="petsNumber">
                     <option value="None">None</option>
@@ -86,87 +79,55 @@
         </div>
 
         <!-- Multiple Checkboxes -->
-        <h5>Interests</h5>
+
         <div class="cell">
+            <label>Interests</label><br/>
             <label class="input-control checkbox">
                 <input type="checkbox" >
                 <span class="check"></span>
                 <span class="caption">None</span>
-            </label><br/>
+            </label>
             <label class="input-control checkbox">
                 <input type="checkbox" >
                 <span class="check"></span>
                 <span class="caption">Walking</span>
-            </label><br/>
+            </label>
             <label class="input-control checkbox">
                 <input type="checkbox" >
                 <span class="check"></span>
                 <span class="caption">Running</span>
-            </label><br/>
+            </label>
             <label class="input-control checkbox">
                 <input type="checkbox" >
                 <span class="check"></span>
                 <span class="caption">Swimming</span>
-            </label><br/>
+            </label>
             <label class="input-control checkbox">
                 <input type="checkbox" >
                 <span class="check"></span>
                 <span class="caption">Biking</span>
-            </label><br/>
+            </label>
             <label class="input-control checkbox">
                 <input type="checkbox" >
                 <span class="check"></span>
                 <span class="caption">Other</span>
             </label> <input id="OtherInt" name="OtherInt" type="text" placeholder="type other interests here" class="input-control text">
-            <!--<label class="col-md-4 control-label" for="Interests">Interests</label>-->
-            <!--<div class="col-md-4">-->
-            <!--<div class="checkbox">-->
-            <!--<label for="Interests-0">-->
-            <!--<input type="checkbox" name="Interests" id="Interests-0" value="None">-->
-            <!--None-->
-            <!--</label>-->
-            <!--</div>-->
-            <!--<div class="checkbox">-->
-            <!--<label for="Interests-1">-->
-            <!--<input type="checkbox" name="Interests" id="Interests-1" value="Walking">-->
-            <!--Walking-->
-            <!--</label>-->
-            <!--</div>-->
-            <!--<div class="checkbox">-->
-            <!--<label for="Interests-2">-->
-            <!--<input type="checkbox" name="Interests" id="Interests-2" value="Running">-->
-            <!--Running-->
-            <!--</label>-->
-            <!--</div>-->
-            <!--<div class="checkbox">-->
-            <!--<label for="Interests-3">-->
-            <!--<input type="checkbox" name="Interests" id="Interests-3" value="Swimming">-->
-            <!--Swimming-->
-            <!--</label>-->
-            <!--</div>-->
-            <!--<div class="checkbox">-->
-            <!--<label for="Interests-4">-->
-            <!--<input type="checkbox" name="Interests" id="Interests-4" value="Biking">-->
-            <!--Biking-->
-            <!--</label>-->
-            <!--</div>-->
-            <!--<div class="checkbox">-->
-            <!--<label for="Interests-5">-->
-            <!--<input type="checkbox" name="Interests" id="Interests-5" value="Other">-->
-            <!--Other-->
-            <!--</label>-->
-            <!--</div>-->
-            <!--</div>-->
+
         </div>
+</div>
 
 
+<div class="row cell2">
         <!-- Textarea -->
         <div class="cell">
-            <h5>Comments</h5>
+            <label>Comments</label>
             <div class="input-control textarea full-size" >
                 <textarea id="Comments" name="Comments"></textarea>
             </div>
         </div>
+</div>
+
+<div class="row cell2">
 
         <!-- Multiple Checkboxes -->
         <div class="cell">
@@ -177,16 +138,17 @@
             </label>
         </div>
 
+</div>
+
+<div class="row cells2">
         <!-- Button -->
-        <div class="cell">
 
             <button id="Submit" name="Submit" class="button primary">Submit</button>
+</div>
 
-        </div>
 
-    </fieldset>
 </form>
-
+</div>
 
 </body>
 </html>
