@@ -216,9 +216,11 @@
                         <!-- Select Basic -->
                         <div class="cell colspan5">
                             <label>How many pets do you have?</label><br/>
+
                             <div class="input-control select full-size">
-                                <select id="petsNumber" name="petsNumber">
-                                    <option value="None">None</option>
+
+                                <select id="pets" name="petsNumber">
+                                    <option value="0">     None</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -227,19 +229,19 @@
                                 </select>
                             </div>
 
-                            <div class="input-control text full-size" for="petname1">
+                            <div class="input-control text full-size" id="petname1">
                                 <input id="pet1" name="pet1" type="text" placeholder="Type Pet Name #1" >
                             </div>
-                            <div class="input-control text full-size" for="petname2">
+                            <div class="input-control text full-size" id="petname2">
                                 <input id="pet2" name="pet2" type="text" placeholder="Type Pet Name #2" >
                             </div>
-                            <div class="input-control text full-size" for="petname3">
+                            <div class="input-control text full-size" id="petname3">
                                 <input id="pet3" name="pet3" type="text" placeholder="Type Pet Name #3" >
                             </div>
-                            <div class="input-control text full-size" for="petname4">
+                            <div class="input-control text full-size" id="petname4">
                                 <input id="pet4" name="pet4" type="text" placeholder="Type Pet Name #4" >
                             </div>
-                            <div class="input-control text full-size" for="petname5">
+                            <div class="input-control text full-size" id="petname5">
                                 <input id="pet5" name="pet5" type="text" placeholder="Type Pet Name #5" >
                             </div>
                         </div><br/>
@@ -248,7 +250,7 @@
                         <div class="cell colspan5">
                             <label>Interests</label><br/>
                             <label class="input-control checkbox">
-                                <input type="checkbox" >
+                                <input type="checkbox" name="interests_checkbox" >
                                 <span class="check"></span>
                                 <span class="caption">None</span>
                             </label><br/>
@@ -258,25 +260,25 @@
                                 <span class="caption">Walking</span>
                             </label><br/>
                             <label class="input-control checkbox">
-                                <input type="checkbox" >
+                                <input type="checkbox" name="interests_checkbox" >
                                 <span class="check"></span>
                                 <span class="caption">Running</span>
                             </label><br/>
                             <label class="input-control checkbox">
-                                <input type="checkbox" >
+                                <input type="checkbox" name="interests_checkbox">
                                 <span class="check"></span>
                                 <span class="caption">Swimming</span>
                             </label><br/>
                             <label class="input-control checkbox">
-                                <input type="checkbox" >
+                                <input type="checkbox" name="interests_checkbox" >
                                 <span class="check"></span>
                                 <span class="caption">Biking</span>
                             </label><br/>
                             <label class="input-control checkbox">
-                                <input type="checkbox" >
+                                <input type="checkbox" name="interests_checkbox" id="interestsother" value="Other"  >
                                 <span class="check"></span>
                                 <span class="caption">Other</span>
-                            </label> <input id="OtherInt" name="OtherInt" type="text" placeholder="type other interests here" class="input-control text">
+                            </label> <input id="interestothertext" name="OtherInt" type="text" placeholder="type other interests here" class="input-control text">
                             <br/><br/>
 
                         </div>
@@ -436,6 +438,51 @@ if (isvalid == true) {
 
 
 };
+
+// how many pets
+
+    document.getElementById("petname1").style.display = "none";
+    document.getElementById("petname2").style.display = "none";
+    document.getElementById("petname3").style.display = "none";
+    document.getElementById("petname4").style.display = "none";
+    document.getElementById("petname5").style.display = "none";
+
+    document.getElementById("pets").onchange = function () {
+        var num = this.value;
+        var divname = "petname";
+        var max = 5;
+
+        for (var i = 1; i <= num; i++ ) {
+             var divshow = divname + i;
+             document.getElementById(divshow).style.display = "block";
+
+        }
+
+        var divhide = num;
+        divhide++;
+
+        while (divhide <= max) {
+            var hideme = divname + divhide;
+            document.getElementById(hideme).style.display = "none";
+            divhide++;
+        }
+
+    }
+
+
+    //checkbox other
+
+    document.getElementById("interestothertext").style.display = "none";
+
+    document.getElementById("interestsother").onclick = function() {
+        var other = document.getElementById("interestothertext");
+
+        if (this.checked == true) {
+            other.style.display = "inline";
+        }   else {
+                other.style.display = "none";
+            }
+    }
 
 
 
