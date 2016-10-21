@@ -195,9 +195,8 @@
                                 <span class="check"></span>
                                 <span class="caption">Birds</span>
                             </label>
+
                             <small id="errorFavPet" class="errorText"></small>
-
-
                         </div>
 </div><br/>
 
@@ -210,43 +209,7 @@
                                 <input id="petNames" name="petNames" type="text" placeholder="Type your pet name" class="form-control input-md">
                             </div>
                         </div>
-</div><br/>
 
-<div class="row flex-just-sb">
-                        <!-- Select Basic -->
-                        <div class="cell colspan6 no-padding-bottom">
-                            <label>How many pets do you have?</label><br/>
-
-                            <div class="input-control select full-size">
-
-                                <select id="pets" name="petsNumber">
-                                    <option value="0">     None</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div><br/><br/>
-
-                            <div class="input-control text full-size" id="petname1">
-                                <input id="pet1" name="pet1" type="text" placeholder="Type Pet Name #1" >
-                            </div><br/>
-                            <div class="input-control text full-size" id="petname2">
-                                <input id="pet2" name="pet2" type="text" placeholder="Type Pet Name #2" >
-                            </div><br/>
-                            <div class="input-control text full-size" id="petname3">
-                                <input id="pet3" name="pet3" type="text" placeholder="Type Pet Name #3" >
-                            </div><br/>
-                            <div class="input-control text full-size" id="petname4">
-                                <input id="pet4" name="pet4" type="text" placeholder="Type Pet Name #4" >
-                            </div><br/>
-                            <div class="input-control text full-size" id="petname5">
-                                <input id="pet5" name="pet5" type="text" placeholder="Type Pet Name #5" >
-                            </div><br/>
-                        </div><br/><br/>
-
-                        <!-- Multiple Checkboxes -->
                         <div class="cell padding20 no-padding-top no-padding-right no-padding-bottom colspan6">
                             <label>Interests</label><br/>
                             <label class="input-control checkbox">
@@ -280,25 +243,71 @@
                                 <span class="caption">Other</span>
                             </label><br/><br/>
 
-                            <div class="input-control text full-size">
+
+
+
+                        </div>
+
+
+</div>
+
+<div class="row flex-just-sb">
+                        <!-- Select Basic -->
+                        <div class="cell colspan6 no-padding-bottom no-padding-top no-padding-bottom ">
+                            <label>How many pets do you have?</label><br/>
+
+                            <div class="input-control select full-size">
+
+                                <select id="pets" name="petsNumber">
+                                    <option value="0">None</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div><br/>
+
+                            <div class="input-control text full-size " id="petname1">
+                                <input id="pet1" name="pet1" type="text" placeholder="Type Pet Name #1" >
+                            </div>
+                            <div class="input-control text full-size" id="petname2">
+                                <input id="pet2" name="pet2" type="text" placeholder="Type Pet Name #2" >
+                            </div>
+                            <div class="input-control text full-size" id="petname3">
+                                <input id="pet3" name="pet3" type="text" placeholder="Type Pet Name #3" >
+                            </div>
+                            <div class="input-control text full-size" id="petname4">
+                                <input id="pet4" name="pet4" type="text" placeholder="Type Pet Name #4" >
+                            </div>
+                            <div class="input-control text full-size" id="petname5">
+                                <input id="pet5" name="pet5" type="text" placeholder="Type Pet Name #5" >
+                            </div><br/>
+                        </div>
+
+                        <!-- Multiple Checkboxes -->
+                        <div class="cell padding20 no-padding-top no-padding-right no-padding-bottom colspan6">
+
+                            <div class="input-control text full-size"><br/>
                                 <input id="interestothertext" name="OtherInt" type="text" placeholder="Type other interests here">
                             </div>
 
-                            <br/>
+
 
                         </div>
 
 </div>
 
+<div class="row flex-just-sb">
                         <!-- Textarea -->
-                        <div class="cell no-padding-bottom ">
+                        <div class="cell colspan12 no-padding-bottom ">
                             <label>Comments</label><br/>
                             <div class="input-control textarea full-size" >
                                 <textarea id="Comments" name="Comments"></textarea>
-                                <small id="errorComments" class="errorText row flex-just-end"></small>
+                                <small id="errorComments" class="errorText"></small>
                             </div>
                         </div><br/>
-
+</div>
                         <!-- Multiple Checkboxes -->
                         <div class="cell no-padding-bottom ">
                             <label class="input-control checkbox">
@@ -441,7 +450,7 @@
         }
 
         if (anychecked == -1){
-            document.getElementById("errorFavPet").innerHTML = "Fav Pet Required!";
+            document.getElementById("errorFavPet").innerHTML = "A Favorite Pet is Required!";
             isvalid = false;
         }
 
