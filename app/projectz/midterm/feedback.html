@@ -149,36 +149,36 @@
                         <!-- Text input-->
                         <br/>
 <div class="row flex-just-sb">
-                        <div class="cell colspan5">
+                        <div class="cell colspan6 no-padding-bottom">
                             <label>Name</label>
                             <div class="input-control text full-size" for="Name">
                                 <input id="Name" name="Name" type="text" placeholder="Enter your name here">
-                                <small id="errorName" class="errorText"></small>
+                                <small id="errorName" class="errorText row flex-just-end"></small>
                             </div>
                         </div>
 
-                        <div class="cell colspan5">
+                        <div class="cell padding20 no-padding-top no-padding-right no-padding-bottom colspan6">
                             <label>Email</label>
                             <div class="input-control text full-size" for="Email">
                                 <input id="Email" name="Email" type="text" placeholder="Enter your email here">
-                                <small id="errorEmail" class="errorText"></small>
+                                <small id="errorEmail" class="errorText row flex-just-end"></small>
                             </div>
                         </div>
 </div><br/>
 
 <div class="row flex-just-sb">
                         <!-- Text input-->
-                        <div class="cell colspan5">
+                        <div class="cell colspan6">
                             <label >Phone</label>
                             <div class="input-control text full-size" for="Phone">
                                 <input id="Phone" name="Phone" type="text" placeholder="Enter your phone here">
-                                <small id="errorPhone" class="errorText"></small>
+                                <small id="errorPhone" class="errorText row flex-just-end"></small>
                             </div>
                         </div><br/>
 
                         <!-- Multiple Radios -->
 
-                        <div class="cell colspan5">
+                        <div class="cell padding20 no-padding-top no-padding-right no-padding-bottom colspan6">
                             <label >Select a favorite Pet</label><br/>
                             <label class="input-control radio">
                                 <input type="radio" name="favpet" id="fav_cats" value="Cats">
@@ -204,7 +204,7 @@
 <div class="row flex-just-sb">
 
                         <!-- Text input-->
-                        <div class="cell colspan5">
+                        <div class="cell colspan6">
                             <label>Pet Name: #N</label>
                             <div class="input-control text full-size" for="PetName">
                                 <input id="petNames" name="petNames" type="text" placeholder="Type your pet name" class="form-control input-md">
@@ -214,7 +214,7 @@
 
 <div class="row flex-just-sb">
                         <!-- Select Basic -->
-                        <div class="cell colspan5">
+                        <div class="cell colspan6 no-padding-bottom">
                             <label>How many pets do you have?</label><br/>
 
                             <div class="input-control select full-size">
@@ -227,74 +227,80 @@
                                     <option value="4">4</option>
                                     <option value="5">5</option>
                                 </select>
-                            </div>
+                            </div><br/><br/>
 
                             <div class="input-control text full-size" id="petname1">
                                 <input id="pet1" name="pet1" type="text" placeholder="Type Pet Name #1" >
-                            </div>
+                            </div><br/>
                             <div class="input-control text full-size" id="petname2">
                                 <input id="pet2" name="pet2" type="text" placeholder="Type Pet Name #2" >
-                            </div>
+                            </div><br/>
                             <div class="input-control text full-size" id="petname3">
                                 <input id="pet3" name="pet3" type="text" placeholder="Type Pet Name #3" >
-                            </div>
+                            </div><br/>
                             <div class="input-control text full-size" id="petname4">
                                 <input id="pet4" name="pet4" type="text" placeholder="Type Pet Name #4" >
-                            </div>
+                            </div><br/>
                             <div class="input-control text full-size" id="petname5">
                                 <input id="pet5" name="pet5" type="text" placeholder="Type Pet Name #5" >
-                            </div>
-                        </div><br/>
+                            </div><br/>
+                        </div><br/><br/>
 
                         <!-- Multiple Checkboxes -->
-                        <div class="cell colspan5">
+                        <div class="cell padding20 no-padding-top no-padding-right no-padding-bottom colspan6">
                             <label>Interests</label><br/>
                             <label class="input-control checkbox">
                                 <input type="checkbox" name="interests_checkbox" >
                                 <span class="check"></span>
                                 <span class="caption">None</span>
-                            </label><br/>
+                            </label>
                             <label class="input-control checkbox">
                                 <input type="checkbox" >
                                 <span class="check"></span>
                                 <span class="caption">Walking</span>
-                            </label><br/>
+                            </label>
                             <label class="input-control checkbox">
                                 <input type="checkbox" name="interests_checkbox" >
                                 <span class="check"></span>
                                 <span class="caption">Running</span>
-                            </label><br/>
+                            </label>
                             <label class="input-control checkbox">
                                 <input type="checkbox" name="interests_checkbox">
                                 <span class="check"></span>
                                 <span class="caption">Swimming</span>
-                            </label><br/>
+                            </label>
                             <label class="input-control checkbox">
                                 <input type="checkbox" name="interests_checkbox" >
                                 <span class="check"></span>
                                 <span class="caption">Biking</span>
-                            </label><br/>
+                            </label>
                             <label class="input-control checkbox">
                                 <input type="checkbox" name="interests_checkbox" id="interestsother" value="Other"  >
                                 <span class="check"></span>
                                 <span class="caption">Other</span>
-                            </label> <input id="interestothertext" name="OtherInt" type="text" placeholder="type other interests here" class="input-control text">
-                            <br/><br/>
+                            </label><br/><br/>
+
+                            <div class="input-control text full-size">
+                                <input id="interestothertext" name="OtherInt" type="text" placeholder="Type other interests here">
+                            </div>
+
+                            <br/>
 
                         </div>
 
 </div>
+
                         <!-- Textarea -->
-                        <div class="cell">
+                        <div class="cell no-padding-bottom ">
                             <label>Comments</label><br/>
                             <div class="input-control textarea full-size" >
                                 <textarea id="Comments" name="Comments"></textarea>
-                                <small id="errorComments" class="errorText"></small>
+                                <small id="errorComments" class="errorText row flex-just-end"></small>
                             </div>
                         </div><br/>
 
                         <!-- Multiple Checkboxes -->
-                        <div class="cell">
+                        <div class="cell no-padding-bottom ">
                             <label class="input-control checkbox">
                                 <input type="checkbox" name="remember" id="agreement" value="1" />
                                 <span class="check"></span>
@@ -306,7 +312,7 @@
                         <!-- Button -->
                         <div class="cell">
 
-                            <input type="button" id="inputSubmit" value="Submit" class="button primary">
+                            <input type="button" id="inputSubmit" value="Submit" class="button full-size">
 
                         </div>
 
@@ -321,7 +327,52 @@
 </div>
 
 <script>
-document.getElementById("inputSubmit").onclick = function () {
+
+    var mybutton = document.getElementById("inputSubmit");
+    mybutton.disabled = true;
+
+
+    // validate checkbox
+
+
+    var agreement = document.getElementById("agreement");
+
+//    document.getElementById("errorAgree").innerHTML = "";
+//    document.getElementById("agreement").removeAttribute("class", "error");
+
+    //    if (agreement.checked == false) {
+    //
+    //        document.getElementById("errorAgree").innerHTML = " - You must agree with the terms";
+    //        document.getElementById("agreement").setAttribute("class", "error");
+    //        isvalid = false;
+    //    }
+
+
+    // Wire-up Checkbox
+
+
+    agreement.onclick = function(){
+        if(this.checked == true){
+            mybutton.disabled = false;
+            document.getElementById("inputSubmit").setAttribute("class", "primary full-size");
+
+        } else {
+            mybutton.disabled = true;
+            document.getElementById("inputSubmit").setAttribute("class", "disabled full-size");
+
+
+//            document.getElementById("errorAgree").innerHTML = " - You must agree with the terms";
+//            document.getElementById("agreement").setAttribute("class", "error");
+
+
+        }
+    };
+
+
+
+
+
+    document.getElementById("inputSubmit").onclick = function () {
 
     var isvalid = true;
 
@@ -412,19 +463,6 @@ document.getElementById("inputSubmit").onclick = function () {
 
     }
 
-// validate checkbox
-
-
-    var agreement = document.getElementById("agreement");
-    document.getElementById("errorAgree").innerHTML = "";
-    document.getElementById("agreement").removeAttribute("class", "error");
-
-    if (agreement.checked == false) {
-
-        document.getElementById("errorAgree").innerHTML = " - You must agree with the terms";
-        document.getElementById("agreement").setAttribute("class", "error");
-        isvalid = false;
-    }
 
 //    Thank you message
 
