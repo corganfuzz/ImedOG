@@ -139,7 +139,7 @@
                 <h1 class="text-light">Feedback  <span class="mif-bubbles place-right"></span></h1>
                 <hr class="thin bg-grayLighter">
 <div id="contentcop">
-                <form >
+                <form>
 <div id="flex-grid">
                     <fieldset>
 
@@ -213,27 +213,27 @@
                         <div class="cell padding20 no-padding-top no-padding-right no-padding-bottom colspan6">
                             <label>Interests</label><br/>
                             <label class="input-control checkbox">
-                                <input type="checkbox" name="interests_checkbox" >
+                                <input type="checkbox" name="interests_checkbox" id="nothing"  >
                                 <span class="check"></span>
-                                <span class="caption">None</span>
+                                <span class="caption" >None</span>
                             </label>
                             <label class="input-control checkbox">
-                                <input type="checkbox" >
+                                <input type="checkbox" name="interests_checkbox" id="walking">
                                 <span class="check"></span>
                                 <span class="caption">Walking</span>
                             </label>
                             <label class="input-control checkbox">
-                                <input type="checkbox" name="interests_checkbox" >
+                                <input type="checkbox" name="interests_checkbox" id="running">
                                 <span class="check"></span>
                                 <span class="caption">Running</span>
                             </label>
                             <label class="input-control checkbox">
-                                <input type="checkbox" name="interests_checkbox">
+                                <input type="checkbox" name="interests_checkbox" id="swimming">
                                 <span class="check"></span>
                                 <span class="caption">Swimming</span>
                             </label>
                             <label class="input-control checkbox">
-                                <input type="checkbox" name="interests_checkbox" >
+                                <input type="checkbox" name="interests_checkbox" id="biking" >
                                 <span class="check"></span>
                                 <span class="caption">Biking</span>
                             </label>
@@ -241,7 +241,8 @@
                                 <input type="checkbox" name="interests_checkbox" id="interestsother" value="Other"  >
                                 <span class="check"></span>
                                 <span class="caption">Other</span>
-                            </label><br/><br/>
+                            </label>
+                            <br/><br/>
 
 
 
@@ -518,18 +519,55 @@ if (isvalid == true) {
 
 
     //checkbox other
+    var nothing = document.getElementById("nothing");
 
     document.getElementById("interestothertext").style.display = "none";
+    var other = document.getElementById("interestothertext");
 
     document.getElementById("interestsother").onclick = function() {
-        var other = document.getElementById("interestothertext");
+
 
         if (this.checked == true) {
             other.style.display = "inline";
+            nothing.checked = false;
+
         }   else {
                 other.style.display = "none";
             }
     }
+
+
+    //Interests = none
+
+    var isAllcheck = true;
+
+
+    document.getElementById("nothing").onclick = function(source) {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked == true) {
+                checkboxes[i].checked = source.checked;
+                nothing.checked = true;
+            }
+        }
+        other.style.display = "none";
+
+    };
+
+    document.getElementById("walking").onclick = function(){
+        nothing.checked = false;
+    };
+
+    document.getElementById("running").onclick = function(){
+        nothing.checked = false;
+    };
+    document.getElementById("swimming").onclick = function(){
+        nothing.checked = false;
+    };
+    document.getElementById("biking").onclick = function(){
+        nothing.checked = false;
+    };
 
 
 
