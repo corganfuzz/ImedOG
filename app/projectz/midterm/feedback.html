@@ -433,16 +433,28 @@
 
     var phone = document.getElementById("Phone").value;
 
+
     document.getElementById("errorPhone").innerHTML = "";
     document.getElementById("Phone").removeAttribute("class", "error");
 
-    if (phone == '') {
-        document.getElementById("errorPhone").innerHTML = "Phone is Required";
-        document.getElementById("Phone").setAttribute("class", "error");
-        isvalid = false;
-        document.body.scrollLeft = 0;
-        document.body.scrollTop = 0;
-    }
+        if (phone == '') {
+            document.getElementById("errorPhone").innerHTML = "Phone is Required";
+            document.getElementById("Phone").setAttribute("class", "error");
+        }
+         if (isNaN(phone)) {
+                document.getElementById("errorPhone").innerHTML = "Phone field only accepts numbers";
+                document.getElementById("Phone").setAttribute("class", "error");
+                isvalid = false;
+                document.body.scrollLeft = 0;
+                document.body.scrollTop = 0;
+        }
+
+
+
+
+
+
+
 
     //validate favorite pet
 
@@ -550,7 +562,7 @@ if (isvalid == true) {
 
     //Interests = none
 
-    var isAllcheck = true;
+
 
 
     document.getElementById("nothing").onclick = function(source) {
@@ -560,9 +572,11 @@ if (isvalid == true) {
             if (checkboxes[i].checked == true) {
                 checkboxes[i].checked = source.checked;
                 nothing.checked = true;
+                agreement.checked = true;
             }
         }
         other.style.display = "none";
+
 
     };
 
@@ -580,6 +594,7 @@ if (isvalid == true) {
         nothing.checked = false;
     };
 
+//    agreement.checked = true;
 
 
 
