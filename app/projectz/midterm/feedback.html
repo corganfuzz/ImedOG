@@ -213,7 +213,7 @@
                         <div class="cell padding20 no-padding-top no-padding-right no-padding-bottom colspan6">
                             <label>Interests</label><br/>
                             <label class="input-control checkbox">
-                                <input type="checkbox" name="interests_checkbox" id="nothing"  >
+                            <input type="checkbox" name="interests_checkbox" id="nothing">
                                 <span class="check"></span>
                                 <span class="caption" >None</span>
                             </label>
@@ -568,14 +568,19 @@ if (isvalid == true) {
     document.getElementById("nothing").onclick = function(source) {
         var checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-        for (var i = 0; i < checkboxes.length; i++) {
+
+        for (var i = 0; i < checkboxes.length-1; i++) {
             if (checkboxes[i].checked == true) {
                 checkboxes[i].checked = source.checked;
                 nothing.checked = true;
-                agreement.checked = true;
+                agreement.unchecked = true;
             }
+
+
         }
         other.style.display = "none";
+
+
 
 
     };
@@ -594,7 +599,7 @@ if (isvalid == true) {
         nothing.checked = false;
     };
 
-//    agreement.checked = true;
+
 
 
 
