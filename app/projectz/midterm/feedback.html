@@ -405,18 +405,29 @@
 
     //validate email
 
-    var email = document.getElementById("Email").value;
+    var email = document.getElementById("Email");
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
 
     document.getElementById("errorEmail").innerHTML = "";
     document.getElementById("Email").removeAttribute("class", "error");
 
-    if (email == '') {
-        document.getElementById("errorEmail").innerHTML = "Email is Required";
+    if (!filter.test(email.value)) {
+        document.getElementById("errorEmail").innerHTML = "Required email is invalid use you@mail.com form";
         document.getElementById("Email").setAttribute("class", "error");
         isvalid = false;
         document.body.scrollLeft = 0;
         document.body.scrollTop = 0;
     }
+
+
+
+
+
+
+
+
+
 
     // validate phone
 
