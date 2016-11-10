@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="scripts/jquery-3.1.1.js"></script>
+</head>
+<title>hw04</title>
+<!--
+INSTRUCTIONS:
+
+1.  Convert the JavaScript code below to jQuery.
+2.  When the user mouseover's a colored box (red, white, blue), it will display a different color.
+(Red will become Green, White will become Black, blue will become Yellow)
+3.  Change the text within the div to say the new color name
+4.  When the user mouseout's from a colored box, the original background color and color name will display
+
+NOTE:  Don't forget to include the jQuery library.
+
+Upload this file to your "assignment9/part2" folder of your site when complete.
+
+//-->
+
+<style>
+div {
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	margin-right: 10px;
+	line-height: 100px;
+}
+#box1 {
+	background-color: red;
+	float: left;
+}
+#box2 {
+	background-color: white;
+	float: left;
+}
+#box3 {
+	background-color: blue;
+	float: left;
+}
+p {
+	clear: both;
+}
+</style>
+</head>
+<body>
+
+<div id="box1">Red</div>
+
+<div id="box2">White</div>
+
+<div id="box3">Blue</div>
+
+<p id="text"></p>
+
+
+<script>
+
+//function showColor(boxname, newcolor, textcolor) {
+//
+//	document.getElementById(boxname).innerHTML = newcolor;
+//	document.getElementById(boxname).style.backgroundColor = newcolor;
+//
+//  if (textcolor != "") {
+//		document.getElementById(boxname).style.color = textcolor;
+//	}
+//}
+//
+//document.getElementById("box1").onmouseover = function() {
+//	showColor("box1", "Green");
+//};
+//
+//document.getElementById("box1").onmouseout = function() {
+//	showColor("box1", "Red");
+//};
+//
+//document.getElementById("box2").onmouseover = function() {
+//	showColor("box2", "Black", "white");
+//};
+//
+//document.getElementById("box2").onmouseout = function() {
+//	showColor("box2", "White", "black");
+//};
+//
+//document.getElementById("box3").onmouseover = function() {
+//	showColor("box3", "Yellow");
+//};
+//
+//document.getElementById("box3").onmouseout = function() {
+//	showColor("box3", "Blue");
+//};
+
+
+
+
+
+$('#box1').hover(
+
+  function () {
+    $(this).css('background-color', 'green').text('Green');
+
+  }, function () {
+    $(this).css('background-color', 'red').text('Red');
+  }
+
+);
+
+$('#box2').hover(
+
+  function () {
+    $(this).css('background-color', 'black').text('Black').css('color', 'white');
+
+  }, function () {
+    $(this).css('background-color', 'white').text('White').css('color', 'black');;
+  }
+
+);
+
+$('#box3').hover(
+
+  function () {
+    $(this).css('background-color', 'yellow').text('Yellow');
+
+  }, function () {
+    $(this).css('background-color', 'blue').text('Blue');
+  }
+
+);
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <script src="scripts/jquery-3.1.1.js"></script>
+<!--
+INSTRUCTIONS:
+
+Convert the following JavaScript to jQuery.
+
+1.  When the user enters an age you must display a message.
+
+2.  If the age entered is 18 or above then display in the <p> tag "You are old enough to vote! You are XX years old", where XX is the age they entered.
+
+3.  If the age entered is less than 18, then display in the <p> tag You are not old enough to vote.  You must be YY", where YY is the voteAge.
+
+NOTE:  Don't forget to include the jQuery library.
+
+Upload this file to your "assignment9/part2" folder of your site when complete.
+
+//-->
+</head>
+
+<body>
+
+<h1>Can you vote?</h1>
+
+<form>
+How old are you? <input type="text" id="yourAge">
+<button id="mybutton">Check</button>
+</form>
+
+<p id="response"></p>
+
+<script>
+
+  $(document).ready(function () {
+    $('#mybutton').click( function () {
+      var $urAge = $('#yourAge').val();
+
+      if ($urAge < 18) {
+        $('#response').html('You are not old enough to vote' + ' You must be 18');
+      }else {
+        $('#response').html('You are old enough to vote' + ' You are ' + $urAge);
+      }
+
+      return false;
+
+    });
+
+  });
+
+
+
+</script>
+
+</body>
+</html>

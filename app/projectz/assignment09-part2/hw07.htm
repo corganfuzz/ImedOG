@@ -1,0 +1,62 @@
+<html>
+<head>
+  <script src="scripts/jquery-3.1.1.js"></script>
+    <title>DOM Traversal Sample</title>
+    <style>
+        .cell {
+            height: 50px;
+            width: 50px;
+            border: 1px solid #000000;
+			text-align: center;
+        }
+		td:hover {
+			background-color: red;
+		}
+   </style>
+</head>
+<body>
+
+    <table class="board">
+        <tr id="row1" class="row">
+            <td id="cell11" class="cell"></td>
+            <td id="cell12" class="cell"></td>
+            <td id="cell13" class="cell"></td>
+        </tr>
+        <tr id="row2" class="row">
+            <td id="cell21" class="cell"></td>
+            <td id="cell22" class="cell"></td>
+            <td id="cell23" class="cell"></td>
+        </tr>
+        <tr id="row3" class="row">
+            <td id="cell31" class="cell"></td>
+            <td id="cell32" class="cell"></td>
+            <td id="cell33" class="cell"></td>
+        </tr>
+    </table>
+
+	<script>
+	/*
+	INSTRUCTIONS:
+
+	Convert the code below to jQuery
+
+	- This page has a 9x9 table when the user clicks on a cell it will place an X in the cell.
+
+	NOTE:  Don't forget to include the jQuery library.
+
+	*/
+
+  $(document).ready( function () {
+
+    $('td').each( function () {
+      $(this).on('click', function () {
+        $(this).text('X');
+      });
+    });
+  });
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+  <script src="scripts/jquery-3.1.1.js"></script>
+</head>
+<ul id="myList">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<p id="demo">Click the button to append an item to the list</p>
+
+<button id="mybutton">Try it</button>
+
+<p><strong>Note:</strong><br>
+  First create an LI node,<br>
+  then create a Text node,<br>
+  then append the Text node to the LI node.<br>
+  Finally append the LI node to the list.</p>
+
+<script type="text/javascript">
+/*
+INSTRUCTIONS:
+
+TODO:  Convert the plain JavaScript code below to jQuery
+HINT:  Don't forget to include the jQuery library
+
+Using JavaScript to add additional List Items dynamically via mouse click
+
+Uses Unobtrusive JavaScript
+
+Upload this file to your "assignment9/part2" folder of your site when complete.
+*/
+
+//	document.getElementById("mybutton").onclick = myFunction;
+//
+//	function myFunction() {
+//
+//		var node = document.createElement("LI");
+//
+//		var textnode = document.createTextNode("Water");
+//
+//		node.appendChild(textnode);
+//
+//		document.getElementById("myList").appendChild(node);
+//
+//	}
+
+
+$('#mybutton').click(function () {
+  var $newLi = $('<li>Water</li>');
+  $('#myList').append($newLi);
+});
+</script>
+
+</body>
+</html>

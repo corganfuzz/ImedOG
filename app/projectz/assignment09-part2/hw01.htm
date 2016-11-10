@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="scripts/jquery-3.1.1.js"></script>
+</head>
+
+<body>
+
+<h1>Hide Example</h1>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+<script>
+/*
+INSTRUCTIONS:
+
+Hide content on the page.
+
+TODO:
+- Convert the plain JavaScript code below to jQuery
+- Use a local copy of the uncompressed jQuery library
+- Upload to your web server when it works correctly
+
+HINT:  Don't forget to include the jQuery library.
+
+Upload this file to your "assignment9/part2" folder of your site when complete.
+
+*/
+
+//var p = document.getElementsByTagName("p");
+//
+//for(var x = 0; x <= p.length-1; x++){
+//	p[x].onclick = function(){
+//		this.style.display = "none";
+//	};
+//}
+
+$('p').click( function () {
+  $(this).css('display', 'none');
+});
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+

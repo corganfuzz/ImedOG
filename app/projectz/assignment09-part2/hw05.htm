@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="scripts/jquery-3.1.1.js"></script>
+<!--
+INSTRUCTIONS:
+
+Convert the JavaScript below to jQuery.
+
+1.  When the user enters a number between 0 - 100 you must calculate the related letter grade when they click the button.
+
+2.  The letter grades are as follows:
+90 - 100 = A
+80 - 89 = B
+70 - 79 = C
+60 - 69 = D
+59 and below = F
+
+BONUS:  Add validation.  If the user enters a number less than 0 or greater than 100 then display an error message
+
+Upload this file to your "assignment9/part2" folder of your site when complete.
+
+//-->
+</head>
+
+<body>
+
+<h1>Letter Grade</h1>
+
+<form>
+    Input number grade: <input type="text" id="numberGrade">
+
+  <button id="mybutton">Get Letter Grade</button>
+
+</form>
+
+<p>Letter grade: <span id="letterGrade"></span></p>
+
+
+<script>
+
+
+
+$(document).ready(function () {
+
+  $('#mybutton').click( function () {
+
+    var $numberG = $('#numberGrade').val();
+
+    if ($numberG >= 90){
+      $('#letterGrade').html('A').css('color', 'black');
+    }
+    if ($numberG >= 80 && $numberG < 90){
+      $('#letterGrade').html('B').css('color', 'black');
+    }
+    if ($numberG >= 70 && $numberG < 80){
+      $('#letterGrade').html('C').css('color', 'black');
+    }
+    if ($numberG >= 60 && $numberG < 70){
+      $('#letterGrade').html('D').css('color', 'black');
+    }
+    if ($numberG < 60){
+      $('#letterGrade').html('F').css('color', 'black');
+    }
+    if ($numberG < 0 || $numberG > 100) {
+      $('#letterGrade').html('Numbers cannot be negative or greater than 100').css('color', 'red');
+    }
+
+    return false;
+
+  });
+
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
