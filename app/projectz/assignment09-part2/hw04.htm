@@ -91,44 +91,44 @@ p {
 //	showColor("box3", "Blue");
 //};
 
+function showColor(boxname, newcolor, textcolor) {
+
+  $(boxname).html(newcolor);
+  $(boxname).css('background-color', newcolor);
+
+  if (textcolor != "") {
+    $(boxname).css('color', textcolor);
+  }
+}
 
 
 
 
-$('#box1').hover(
-
-  function () {
-    $(this).css('background-color', 'green').text('Green');
+$('#box1').hover(function () {
+    showColor('#box1','Green')
 
   }, function () {
-    $(this).css('background-color', 'red').text('Red');
+    showColor('#box1','Red')
   }
 
 );
 
-$('#box2').hover(
-
-  function () {
-    $(this).css('background-color', 'black').text('Black').css('color', 'white');
+$('#box2').hover(function () {
+    showColor('#box2','Black','White')
 
   }, function () {
-    $(this).css('background-color', 'white').text('White').css('color', 'black');;
+    showColor('#box2','White','Black')
   }
 
 );
-
-$('#box3').hover(
-
-  function () {
-    $(this).css('background-color', 'yellow').text('Yellow');
+$('#box3').hover(function () {
+    showColor('#box3','Yellow')
 
   }, function () {
-    $(this).css('background-color', 'blue').text('Blue');
+    showColor('#box3','Blue')
   }
 
 );
-
-
 
 
 
