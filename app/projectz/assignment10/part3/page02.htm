@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../external/jquery/jquery.js"></script>
+	<!--
+
+	TO DO:
+
+	Add click event to the button
+
+	When the button is clicked, Change the background color of the second .target div to red
+
+	//-->
+	<title>Page 02</title>
+
+	<!-- styles first -->
+
+	<style>
+	.target {
+		height: 100px;
+		width: 100px;
+		background-color: pink;
+		border: 1px solid black;
+		padding: 2px;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- HTML content next -->
+	<div class="target">
+
+	</div>
+
+	<div class="target">
+
+	</div>
+
+	<div class="target">
+
+	</div>
+
+
+	<button>Go</button>
+
+	<!-- Include the Libraries -->
+
+	<!-- Add the Custom JavaScript/jQuery code -->
+	<script>
+
+    $('button').click( function () {
+      $('.target:nth-last-of-type(2)').css('background-color', 'red')
+    });
+
+
+	</script>
+</body>
+</html>

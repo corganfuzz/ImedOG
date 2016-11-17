@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../external/jquery/jquery.js"></script>
+	<!--
+
+	TO DO:
+
+	Un-check all the checkboxes.  Use the button to uncheck via an event.
+
+
+	//-->
+	<title>Page 03</title>
+
+	<!-- styles first -->
+
+	<style>
+	.target {
+		width: 600px;
+		background-color: pink;
+		border: 1px solid black;
+		padding: 2px;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- HTML content next -->
+	<div class="target">
+		<form>
+
+			<input type="checkbox" name="uncheckme" checked="checked" /> Uncheck Me!<br />
+			<input type="checkbox" name="uncheckme" checked="checked" /> Uncheck Me!<br />
+			<input type="checkbox" name="uncheckme" checked="checked" /> Uncheck Me!<br />
+			<input type="checkbox" name="uncheckme" checked="checked" /> Uncheck Me!<br />
+			<input type="checkbox" name="uncheckme" checked="checked" /> Uncheck Me!<br />
+			<input type="checkbox" name="uncheckme" checked="checked" /> Uncheck Me!<br />
+
+			<input type="button" value="Uncheck All" />
+		</form>
+	</div>
+
+	<!-- Include the Libraries -->
+
+	<!-- Add the Custom JavaScript/jQuery code -->
+	<script>
+    $('input:button').click(function () {
+      $('input:checkbox').removeAttr('checked');
+    });
+
+
+	</script>
+</body>
+</html>

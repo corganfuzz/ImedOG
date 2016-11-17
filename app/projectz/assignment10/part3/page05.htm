@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../external/jquery/jquery.js"></script>
+	<!--
+
+	TO DO:
+
+	Toggle all the checkboxes.
+	Use the button to toggle via an event.
+	This will check or uncheck the checkboxes upon press of the button.
+
+	//-->
+	<title>Page 05</title>
+
+	<!-- styles first -->
+
+	<style>
+	.target {
+		width: 600px;
+		background-color: pink;
+		border: 1px solid black;
+		padding: 2px;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- HTML content next -->
+	<div class="target">
+		<form>
+
+			<input type="checkbox" name="toggleme" /> Toggle Me!<br />
+			<input type="checkbox" name="toggleme" /> Toggle Me!<br />
+			<input type="checkbox" name="toggleme" /> Toggle Me!<br />
+			<input type="checkbox" name="toggleme" /> Toggle Me!<br />
+			<input type="checkbox" name="toggleme" /> Toggle Me!<br />
+			<input type="checkbox" name="toggleme" /> Toggle Me!<br />
+			<input type="checkbox" name="toggleme" /> Toggle Me!<br />
+
+			<input type="button" value="Toggle All" />
+		</form>
+	</div>
+
+	<!-- Include the Libraries -->
+
+	<!-- Add the Custom JavaScript/jQuery code -->
+	<script>
+    $('input:button').click(function () {
+      $('input:checkbox').toggle(
+        function () {
+          $(':checkbox').unchecked;
+
+//          $('input:checkbox').attr('checked', 'checked');
+
+        }, function () {
+          $(':checkbox').checked;
+        }
+      );
+    });
+
+
+
+
+
+	</script>
+</body>
+</html>

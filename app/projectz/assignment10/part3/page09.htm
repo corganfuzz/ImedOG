@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+
+	TO DO:
+
+	Add click event to button
+	Remove all children of #target except h2
+
+	//-->
+	<title>Page 09</title>
+
+	<!-- styles first -->
+
+	<style>
+	#target {
+		height: 300px;
+		width: 200px;
+		background-color: pink;
+		border: 1px solid black;
+		padding: 2px;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- HTML content next -->
+	<div id="target">
+
+		<h1>h1</h1>
+
+		<h2>h2(don't remove me!)</h2>
+
+		<h3>h3</h3>
+
+		<h4>h4</h4>
+
+		<h5>h5</h5>
+
+	</div>
+
+
+	<button>Go</button>
+
+	<!-- Include the Libraries -->
+  <script src="../external/jquery/jquery.js"></script>
+	<!-- Add the Custom JavaScript/jQuery code -->
+	<script>
+
+    $('button').click(function () {
+
+      $('#target').children().not('h2').remove();
+
+
+    });
+
+	</script>
+</body>
+</html>

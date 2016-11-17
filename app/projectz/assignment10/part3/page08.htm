@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+	<!--
+
+	TO DO:
+
+	Add click event to button.
+	Show the number of direct children of #target in the #message span
+
+	//-->
+	<title>Page 08</title>
+
+	<!-- styles first -->
+
+	<style>
+	#target {
+		height: 300px;
+		width: 200px;
+		background-color: pink;
+		border: 1px solid black;
+		padding: 2px;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- HTML content next -->
+	<div id="target">
+		<div class="child">.child</div>
+		<div class="child">.child</div>
+		<div class="child">.child</div>
+		<div class="child">.child</div>
+		<div class="child">.child
+			<div class="grandchild">.grandchild</div>
+		</div>
+		<p>p</p>
+
+	</div>
+
+	<span id="message"></span>
+
+	<div><button>Go</button></div>
+
+	<!-- Include the Libraries -->
+  <script src="../external/jquery/jquery.js"></script>
+	<!-- Add the Custom JavaScript/jQuery code -->
+	<script>
+
+    $('button').click (function () {
+      var count = $('#target').children('.child').length;
+      $('span').html('<br/>' + 'The number of direct children is ' + count + '<br/><br/>');
+});
+
+	</script>
+</body>
+</html>

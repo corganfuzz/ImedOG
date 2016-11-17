@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A preview of the jQuery UI Bootstrap theme">
+    <meta name="author" content="Addy Osmani">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.10.0.ie.css"/>
+    <![endif]-->
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <!--begin wijmo menu-->
+    <link href="third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css" />
+    <!--End wijmo menu-->
+    <!--begin file input-->
+    <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet">
+    <!--End file input-->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <style>
+        #resizable { width: 150px; height: 150px; padding: 0.5em; }
+        #resizable h3 { text-align: center; margin: 0; }
+        .toggler { width: 500px; height: 200px; position: relative; }
+        #button { padding: .5em 1em; text-decoration: none; }
+        #effect { width: 240px;  padding: 1em; border: 1px solid #000; background: #eee; color: #333; }
+        .newClass { text-indent: 40px; letter-spacing: .4em; width: 410px; height: 120px; padding: 30px; margin: 10px; font-size: 1.1em; }
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
+
+<!-- Navbar
+================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+
+                    <li class="active">
+                        <a href="./extra.html">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+    <div class="container">
+        <h1>jQuery UI Bootstrap</h1>
+        <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v0.5).</p>
+    </div>
+</header>
+
+
+<div class="container">
+    <!-- Docs nav ================================================== -->
+    <div class="row">
+        <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+                <li><a href="#wijmo"><i class="icon-chevron-right"></i> Accordion</a></li>
+                <li><a href="#file-input"><i class="icon-chevron-right"></i> Date Picker</a></li>
+                <li><a href="#date-range"><i class="icon-chevron-right"></i> Date Range</a></li>
+                <li><a href="#effects"><i class="icon-chevron-right"></i> Effects</a></li>
+            </ul>
+        </div>
+        <div class="span9">
+            <!-- Wijmo ================================================== -->
+            <section id="wijmo">
+                <div class="page-header">
+                    <h1>Accordion</h1>
+                </div>
+                <p>
+                    Displays collapsible content panels for presenting information in a limited amount of space.
+                </p>
+
+                <div id="menu-collapse">
+                    <div>
+                        <h3><a href="#">First</a></h3>
+                        <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                    </div>
+                    <div>
+                        <h3><a href="#">Second</a></h3>
+                        <div>Phasellus mattis tincidunt nibh.</div>
+                    </div>
+                    <div>
+                        <h3><a href="#">Third</a></h3>
+                        <div>Nam dui erat, auctor a, dignissim quis.</div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+
+
+
+            </section>
+
+            <!-- File input -->
+            <section id="file-input">
+                <div class="page-header">
+                    <h1>Date Picker</h1>
+                </div>
+                <p>
+                    Select the input box so you can pick a date
+                </p>
+
+
+                        Date:<br/>
+                        <input type="text" id="datepicker">
+
+
+
+            </section>
+            <!-- end file input -->
+            <!-- File input -->
+
+            <section id="date-range">
+                <div class="page-header">
+                    <h1>Resizable</h1>
+                </div>
+                  <p>Change the size of an element using the mouse.</p>
+
+                <div id="resizable" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Resizable</h3>
+                </div>
+
+            </section>
+
+            <!-- end file input -->
+
+            <!-- Effects -->
+            <section id="effects">
+                <div class="page-header">
+                    <h1>Effects</h1>
+                </div>
+                <p>
+                    Adds class(es) to elements while animating all style changes.
+                </p>
+                <button id="button" class="ui-state-default ui-corner-all">Run Effect</button><br/><br/>
+                <div class="toggler">
+                    <div id="effect" class="ui-corner-all">
+                        Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+                    </div>
+                </div>
+
+
+
+            </section>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <p>
+            jQuery UI Bootstrap &copy; Addy Osmani 2012 - 2013.
+        </p>
+        <p>
+            Twitter Bootstrap &copy; Twitter 2012 - 2013
+        </p>
+        <ul class="footer-links">
+            <li><a href="http://addyosmani.com/blog/">Blog</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
+        </ul>
+    </div>
+</footer>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
+<script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
+<script src="assets/js/docs.js" type="text/javascript"></script>
+<!-- FileInput -->
+<script src="third-party/jQuery-UI-FileInput/js/enhance.min.js" type="text/javascript"></script>
+<script src="third-party/jQuery-UI-FileInput/js/fileinput.jquery.js" type="text/javascript"></script>
+<!-- End FileInput -->
+<!--wijmo-->
+<script src="third-party/wijmo/jquery.mousewheel.min.js" type="text/javascript"></script>
+<script src="third-party/wijmo/jquery.wijmo-open.1.5.0.min.js" type="text/javascript"></script>
+<!--End wijmo-->
+<script src="assets/js/demo.js" type="text/javascript"></script>
+
+
+<script>
+//accordion widget
+    $( function() {
+        $( "#menu-collapse" ).accordion({
+            header: 'h3'
+        });
+    });
+
+//datepicker widget
+    $('#datepicker').datepicker({
+        inline: true
+    });
+
+    //Resizable
+
+$( function() {
+    $( "#resizable" ).resizable();
+} );
+
+$( function() {
+    $( "#button" ).on( "click", function() {
+        $( "#effect" ).addClass( "newClass", 1000, callback );
+    });
+
+    function callback() {
+        setTimeout(function() {
+            $( "#effect" ).removeClass( "newClass" );
+        }, 1500 );
+    }
+} );
+
+</script>
+</script>
+
+
+</body>
+</html>

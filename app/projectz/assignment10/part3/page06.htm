@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../external/jquery/jquery.js"></script>
+
+  <!--
+
+    TO DO:
+
+    Add click event to button
+    Remove all children and text of #target div
+
+    //-->
+	<title>Page 05</title>
+
+	<!-- styles first -->
+
+	<style>
+	#target {
+		height: 300px;
+		width: 200px;
+		background-color: pink;
+		border: 1px solid black;
+		padding: 2px;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- HTML content next -->
+	<div id="target">
+
+		<div class="child">.child</div>
+		<div class="child">.child</div>
+		<div class="child">.child</div>
+		<div class="child">.child</div>
+		<div class="child">.child</div>
+
+		<p>message1</p>
+		<p>message2</p>
+
+	</div>
+
+	<button>Go</button>
+
+	<!-- Include the Libraries -->
+
+	<!-- Add the Custom JavaScript/jQuery code -->
+	<script>
+    $('button').click( function () {
+      $('.child, p').css('display', 'none');
+
+
+    });
+
+
+	</script>
+</body>
+</html>

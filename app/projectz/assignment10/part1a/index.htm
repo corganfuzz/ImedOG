@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery UI - Hello Dialog</title>
+  <link rel="stylesheet" href="../css/jquery-ui.min.css">
+  <script src="../external/jquery/jquery.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+	<style>
+	body {
+		font-fize: 10px;
+	}
+	#btn_hello {
+		display: block;
+		margin: 0px auto;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<button id="btn_hello">Say Hello</button>
+
+	<div id="dlg_hello">Hello!  Welcome to jQuery UI</div>
+
+	<script>
+	// custom jQuery code
+	$(document).ready(function() {
+
+		// Hide the <div> for the dialog box upon load
+		$("#dlg_hello").dialog({
+			autoOpen: false
+		});
+
+		// Assign "Button" widget and click() event
+		$("#btn_hello").button().click(function() {
+			$("#dlg_hello").dialog("open");
+		});
+
+	});
+	</script>
+</body>
+</html>

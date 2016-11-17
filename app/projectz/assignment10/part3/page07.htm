@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+
+	TO DO:
+
+	Display a Modal Dialog Box after a 5 second delay from page load.
+	You will need to add the necessary html and css.
+
+	//-->
+	<title>jQuery UI</title>
+
+	<!-- styles first -->
+
+	<style>
+
+	</style>
+
+</head>
+
+<body>
+
+	<!-- HTML content next -->
+  <div id="dialog" title="Modal">
+    <p>HELLO WORLD! The dialog window can be moved, resized and closed with the 'x' icon.</p>
+  </div>
+
+	<!-- Include the Libraries -->
+  <link rel="stylesheet" href="../css/jquery-ui.min.css">
+  <script src="../external/jquery/jquery.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+	<!-- Add the Custom JavaScript/jQuery code -->
+	<script>
+    $(document).ready( function () {
+      setTimeout(function () {
+        $('#dialog').dialog({
+          show: {
+            effect: 'fade',
+            duration: 200,
+          },
+        });
+      }, 5000)
+    });
+
+
+
+
+
+
+	</script>
+</body>
+</html>

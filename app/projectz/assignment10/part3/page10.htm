@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+
+	TO DO:
+
+	Add click event to button
+	Remove all div tags that do not have child elements.
+
+	//-->
+	<title>Page 10</title>
+
+	<!-- styles first -->
+
+	<style>
+	.target {
+		height: 200px;
+		width: 200px;
+		background-color: pink;
+		border: 1px solid black;
+		padding: 2px;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- HTML content next -->
+	<div class="target">
+		<span>Child</span>
+	</div>
+
+	<div class="target">
+
+	</div>
+
+	<div class="target">
+		<span>Child</span>
+	</div>
+
+	<div class="target">
+
+	</div>
+
+
+	<button>Go</button>
+
+	<!-- Include the Libraries -->
+  <script src="../external/jquery/jquery.js"></script>
+	<!-- Add the Custom JavaScript/jQuery code -->
+	<script>
+    $('button').click(function () {
+      $('.target:not(:has(*))').remove();
+    });
+
+
+
+	</script>
+</body>
+</html>
