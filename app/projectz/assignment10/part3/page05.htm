@@ -49,16 +49,10 @@
 	<!-- Add the Custom JavaScript/jQuery code -->
 	<script>
     $('input:button').click(function () {
-      $('input:checkbox').toggle(
-        function () {
-          $(':checkbox').unchecked;
 
-//          $('input:checkbox').attr('checked', 'checked');
-
-        }, function () {
-          $(':checkbox').checked;
-        }
-      );
+      $('input:checkbox').prop('checked', function (i, val) {
+        return !val
+      })
     });
 
 
