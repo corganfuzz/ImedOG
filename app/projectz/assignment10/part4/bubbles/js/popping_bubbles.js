@@ -15,6 +15,10 @@ BONUS:
 */
 $(document).ready(function () {
 
+  var score = 0;
+  var scape  = 0;
+  var difficult = 0;
+
 	var canvas = document.getElementById('canvas'),
 		ctx = canvas.getContext('2d'),
 		h = window.innerHeight,
@@ -52,6 +56,8 @@ $(document).ready(function () {
 	function init() {
 		for (var i = 0; i < 20; i++) {
 			bubbles.push(new Bubble());
+
+      $('#escaped').html();
 		}
 		makeBubble();
 	};
@@ -59,7 +65,7 @@ $(document).ready(function () {
 	function Bubble() {
 		this.x = randomInt(65, (w-65));
 		this.y = randomInt((h + 70), (h + 100));
-		this.speed = Math.random() * 2;
+		this.speed = Math.random() * 2 + speed();
 		this.size = Math.random() * 60 + 5;
 
 		this.pop = function (i) {
@@ -68,13 +74,30 @@ $(document).ready(function () {
 			document.getElementById('sound').innerHTML="<audio autoplay><source src='audio/pop.wav' type='audio/wav'></audio>";
 			bubbles[i] = new Bubble();
 
+        score++;
 
-      $('#score').html(i);
+
+        $('#score').html(score);
 		}
 
 
 
 	};
+
+  function speed() {
+
+  if (score && score % 20 == 0) {
+    difficult++;
+  }
+
+  if (difficult >= 3) {
+    difficult = 3;
+
+  }
+
+  return difficult;
+}
+
 
 	function makeBubble() {
 		ctx.clearRect(0,0,w,h);
@@ -92,14 +115,27 @@ $(document).ready(function () {
 
 			if (b.y < 0 - b.size * 2) {
 				bubbles[i] = new Bubble;
+        scape++;
+        $('#escaped').text(scape);
+
 			}
 			b.y -= b.speed;
 
 		});
-		setTimeout(makeBubble, 20);
+
+    if (scape <= 20) {
+      setTimeout(makeBubble, 20);
+    }else {
+      alert("You lose the game");
+    }
+
+
 	};
 
+
 });
+
+
 
 function randomInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) + min);
