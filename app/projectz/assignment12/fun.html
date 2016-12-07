@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>jQuery UI Bootstrap</title>
+    <title>Fun Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A preview of the jQuery UI Bootstrap theme">
     <meta name="author" content="Addy Osmani">
@@ -78,8 +78,8 @@
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
     <div class="container">
-        <h1>jQuery UI Bootstrap</h1>
-        <p class="lead">A Bootstrap-themed kickstart for jQuery UI widgets (v0.5).</p>
+        <h1>The Fun Page</h1>
+        <p class="lead">Final part using Bootstrap and Jquery UI</p>
     </div>
 </header>
 
@@ -90,9 +90,8 @@
         <div class="span3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
                 <li><a href="#wijmo"><i class="icon-chevron-right"></i> Accordion</a></li>
-                <li><a href="#file-input"><i class="icon-chevron-right"></i> Date Picker</a></li>
-                <li><a href="#date-range"><i class="icon-chevron-right"></i> Date Range</a></li>
-                <li><a href="#effects"><i class="icon-chevron-right"></i> Effects</a></li>
+                <li><a href="#file-input"><i class="icon-chevron-right"></i> Tabs</a></li>
+                <li><a href="#date-range"><i class="icon-chevron-right"></i> Local Storage</a></li>
             </ul>
         </div>
         <div class="span9">
@@ -124,21 +123,35 @@
 
 
 
-
             </section>
 
             <!-- File input -->
             <section id="file-input">
                 <div class="page-header">
-                    <h1>Date Picker</h1>
+                    <h1>Tabs</h1>
                 </div>
                 <p>
-                    Select the input box so you can pick a date
+                    Select a tab
                 </p>
 
 
-                        Date:<br/>
-                        <input type="text" id="datepicker">
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                        <li><a href="#tabs-2">Proin dolor</a></li>
+                        <li><a href="#tabs-3">Aenean lacinia</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                    </div>
+                    <div id="tabs-2">
+                        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                    </div>
+                    <div id="tabs-3">
+                        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+                    </div>
+                </div>
 
 
 
@@ -148,36 +161,30 @@
 
             <section id="date-range">
                 <div class="page-header">
-                    <h1>Resizable</h1>
+                    <h1>CRUD Local Storage</h1>
                 </div>
-                  <p>Change the size of an element using the mouse.</p>
+                <p>Local storage this is web 2.0</p>
 
-                <div id="resizable" class="ui-widget-content">
-                    <h3 class="ui-widget-header">Resizable</h3>
-                </div>
+                <form id="frmCadastre">
+                        <label for="txtID">ID:</label>
+                        <input type="text" id="txtID"/>
+                        <label for="txtName">Name:</label>
+                        <input type="text" id="txtName"/>
+                        <label for="txtPhone">Phone:</label>
+                        <input type="text" id="txtPhone"/>
+                        <label for="txtEmail">Email:</label>
+                        <input type="text" id="txtEmail"/><br/>
+                        <input type="submit" value="Save" id="btnSave" class="ui-button-primary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"/>
+                </form>
 
-            </section>
+                <table id="tblList">
 
-            <!-- end file input -->
-
-            <!-- Effects -->
-            <section id="effects">
-                <div class="page-header">
-                    <h1>Effects</h1>
-                </div>
-                <p>
-                    Adds class(es) to elements while animating all style changes.
-                </p>
-                <button id="button" class="ui-state-default ui-corner-all">Run Effect</button><br/><br/>
-                <div class="toggler">
-                    <div id="effect" class="ui-corner-all">
-                        Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
-                    </div>
-                </div>
+                </table>
 
 
 
             </section>
+
 
         </div>
     </div>
@@ -219,36 +226,113 @@
 
 
 <script>
-//accordion widget
-    $( function() {
-        $( "#menu-collapse" ).accordion({
-            header: 'h3'
+
+    $(document).ready( function () {
+
+        //accordion widget
+        $( function() {
+            $( "#menu-collapse" ).accordion({
+                header: 'h3'
+            });
         });
+
+        //TABS widget
+
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+
+    //CRUD Global variables
+
+        $(function () {
+            var operation = "A";
+            var selected_index = -1;
+            var tbClients = localStorage.getItem('tbClients');
+            tbClients = JSON.parse(tbClients);
+            if(tbClients == null) {
+                tbClients = [];
+            }
+        });
+
+        //CRUD Add function
+
+        function Add () {
+            var client = JSON.stringify({
+                ID: $('#txtID').val();
+                Name: $('#txtName').val();
+                Phone: $('#txtPhone').val();
+                Email: $('#txtEmail').val();
+            });
+
+            tbClients.push(client);
+            localStorage.setItem('tbClients', JSON.stringify(tbClients));
+            alert("Data was saved");
+            return true;
+        };
+
+        //CRUD Edit function
+
+        function Edit () {
+            tblClients[selected_index] = JSON.stringify({
+
+                ID: $('#txtID').val();
+                Name: $('#txtName').val();
+                Phone: $('#txtPhone').val();
+                Email: $('#txtEmail').val();
+        });
+            localStorage.setItem('tbClients', JSON.stringify(tbClients));
+            alert("Data was edited");
+            operation = "A";
+            return true;
+        };
+
+        //CRUD Delete function
+
+         function Delete () {
+             tbClients.splice(selected_index, 1);
+             localStorage.setItem('tbClients', JSON.stringify(tbClients));
+             alert("Record deleted");
+         };
+
+         //CRUD List function
+
+        function List () {
+          $('#tblList').html("");
+            $('#tblList').html(
+              "<thead>" +
+              "          <tr>" +
+              "          <th></th>" +
+              "          <th>ID</th>" +
+              "          <th>Name</th>" +
+              "          <th>Phone</th>" +
+              "          <th>Email</th>" +
+              "          <thead>" +
+              "</thead>"+
+              "<tbody>" +
+              "</tbody>"
+              );
+
+            for(var i in tbClients){
+                var cli = JSON.parse(tbClients[i]);
+                $('#tblList tbody').append("tr" +
+
+
+                )
+            }
+
+        };
+
+
+
+
     });
 
-//datepicker widget
 
-    $('#datepicker').datepicker({
-        inline: true
-    });
 
-    //Resizable
 
-$( function() {
-    $( "#resizable" ).resizable();
-} );
 
-$( function() {
-    $( "#button" ).on( "click", function() {
-        $( "#effect" ).addClass( "newClass", 1000, callback );
-    });
 
-    function callback() {
-        setTimeout(function() {
-            $( "#effect" ).removeClass( "newClass" );
-        }, 1500 );
-    }
-} );
+
 
 </script>
 </script>
@@ -256,3 +340,4 @@ $( function() {
 
 </body>
 </html>
+
