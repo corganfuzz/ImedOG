@@ -43,6 +43,28 @@
         #button { padding: .5em 1em; text-decoration: none; }
         #effect { width: 240px;  padding: 1em; border: 1px solid #000; background: #eee; color: #333; }
         .newClass { text-indent: 40px; letter-spacing: .4em; width: 410px; height: 120px; padding: 30px; margin: 10px; font-size: 1.1em; }
+
+
+        ul{
+            list-style:none;
+        }
+
+        ul label{
+            width:100px;
+            float:left;
+        }
+
+        #tblList thead{
+            background: #0064cd;
+            color: white;
+        }
+
+        img {
+            margin-right: 10px;
+            padding: 5px;
+            color: white;
+        }
+
     </style>
 
 </head>
@@ -177,7 +199,7 @@
                         <input type="submit" value="Save" id="btnSave" class="ui-button-primary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"/>
                 </form>
 
-                <table id="tblList">
+                <table id="tblList" class="table table-bordered table-striped table-hover">
 
                 </table>
 
@@ -226,11 +248,8 @@
 
 
 <script>
-
-    $(document).ready( function () {
-
         //accordion widget
-        $( function() {
+        $(function() {
             $( "#menu-collapse" ).accordion({
                 header: 'h3'
             });
@@ -238,94 +257,112 @@
 
         //TABS widget
 
-        $( function() {
+        $(function() {
             $( "#tabs" ).tabs();
-        } );
-
-    //CRUD Global variables
-
-        $(function () {
-            var operation = "A";
-            var selected_index = -1;
-            var tbClients = localStorage.getItem('tbClients');
-            tbClients = JSON.parse(tbClients);
-            if(tbClients == null) {
-                tbClients = [];
-            }
         });
 
-        //CRUD Add function
+        $(function(){
+            var operation = "A"; //"A"=Adding; "E"=Editing
 
-        function Add () {
-            var client = JSON.stringify({
-                ID: $('#txtID').val();
-                Name: $('#txtName').val();
-                Phone: $('#txtPhone').val();
-                Email: $('#txtEmail').val();
+            var selected_index = -1; //Index of the selected list item
+
+            var tbClients = localStorage.getItem("tbClients");//Retrieve the stored data
+
+            tbClients = JSON.parse(tbClients); //Converts string to object
+
+            if(tbClients == null) //If there is no data, initialize an empty array
+                tbClients = [];
+
+            function Add(){
+                var client = JSON.stringify({
+                    ID    : $("#txtID").val(),
+                    Name  : $("#txtName").val(),
+                    Phone : $("#txtPhone").val(),
+                    Email : $("#txtEmail").val()
+                });
+                tbClients.push(client);
+                localStorage.setItem("tbClients", JSON.stringify(tbClients));
+                alert("The data was saved.");
+                return true;
+            }
+
+            function Edit(){
+                tbClients[selected_index] = JSON.stringify({
+                    ID    : $("#txtID").val(),
+                    Name  : $("#txtName").val(),
+                    Phone : $("#txtPhone").val(),
+                    Email : $("#txtEmail").val()
+                });//Alter the selected item on the table
+                localStorage.setItem("tbClients", JSON.stringify(tbClients));
+                alert("The data was edited.")
+                operation = "A"; //Return to default value
+                return true;
+            }
+
+            function Delete(){
+                tbClients.splice(selected_index, 1);
+                localStorage.setItem("tbClients", JSON.stringify(tbClients));
+                alert("Client deleted.");
+            }
+
+            function List(){
+                $("#tblList").html("");
+                $("#tblList").html(
+                    "<thead>"+
+                    "	<tr>"+
+                    "	<th>Action</th>"+
+                    "	<th>ID</th>"+
+                    "	<th>Name</th>"+
+                    "	<th>Phone</th>"+
+                    "	<th>Email</th>"+
+                    "	</tr>"+
+                    "</thead>"+
+                    "<tbody>"+
+                    "</tbody>"
+                );
+                for(var i in tbClients){
+                    var cli = JSON.parse(tbClients[i]);
+                    $("#tblList tbody").append("<tr>"+
+                        "	<td><img alt=' ' " +i+"' class='btnEdit icon-pencil icon-2x  label-success'/> <img alt=' ' "+i+" class='btnDelete icon-remove icon-2x label-warning'/></td>" +
+                        "	<td>"+cli.ID+"</td>" +
+                        "	<td>"+cli.Name+"</td>" +
+                        "	<td>"+cli.Phone+"</td>" +
+                        "	<td>"+cli.Email+"</td>" +
+                        "</tr>");
+                }
+            }
+
+            $("#frmCadastre").bind("submit",function(){
+                if(operation == "A")
+                    return Add();
+                else
+                    return Edit();
             });
 
-            tbClients.push(client);
-            localStorage.setItem('tbClients', JSON.stringify(tbClients));
-            alert("Data was saved");
-            return true;
-        };
+            List();
 
-        //CRUD Edit function
+            $(".btnEdit").bind("click", function(){
 
-        function Edit () {
-            tblClients[selected_index] = JSON.stringify({
+                operation = "E";
+                selected_index = parseInt($(this).attr("alt").replace("Edit", ""));
 
-                ID: $('#txtID').val();
-                Name: $('#txtName').val();
-                Phone: $('#txtPhone').val();
-                Email: $('#txtEmail').val();
+                var cli = JSON.parse(tbClients[selected_index]);
+                $("#txtID").val(cli.ID);
+                $("#txtName").val(cli.Name);
+                $("#txtPhone").val(cli.Phone);
+                $("#txtEmail").val(cli.Email);
+                $("#txtID").attr("readonly","readonly");
+                $("#txtName").focus();
+            });
+
+            $(".btnDelete").bind("click", function(){
+                selected_index = parseInt($(this).attr("alt").replace("Delete", ""));
+                Delete();
+                List();
+            });
         });
-            localStorage.setItem('tbClients', JSON.stringify(tbClients));
-            alert("Data was edited");
-            operation = "A";
-            return true;
-        };
-
-        //CRUD Delete function
-
-         function Delete () {
-             tbClients.splice(selected_index, 1);
-             localStorage.setItem('tbClients', JSON.stringify(tbClients));
-             alert("Record deleted");
-         };
-
-         //CRUD List function
-
-        function List () {
-          $('#tblList').html("");
-            $('#tblList').html(
-              "<thead>" +
-              "          <tr>" +
-              "          <th></th>" +
-              "          <th>ID</th>" +
-              "          <th>Name</th>" +
-              "          <th>Phone</th>" +
-              "          <th>Email</th>" +
-              "          <thead>" +
-              "</thead>"+
-              "<tbody>" +
-              "</tbody>"
-              );
-
-            for(var i in tbClients){
-                var cli = JSON.parse(tbClients[i]);
-                $('#tblList tbody').append("tr" +
 
 
-                )
-            }
-
-        };
-
-
-
-
-    });
 
 
 
@@ -335,7 +372,7 @@
 
 
 </script>
-</script>
+
 
 
 </body>
