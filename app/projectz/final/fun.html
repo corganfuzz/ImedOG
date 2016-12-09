@@ -61,10 +61,11 @@
             color: white;
         }
 
-        img {
+        area {
             margin-right: 10px;
             padding: 5px;
             color: white;
+
         }
 
     </style>
@@ -112,14 +113,40 @@
     <div class="row">
         <div class="span3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
-                <li><a href="#wijmo"><i class="icon-chevron-right"></i> Accordion</a></li>
-                <li><a href="#file-input"><i class="icon-chevron-right"></i> Tabs</a></li>
-                <li><a href="#date-range"><i class="icon-chevron-right"></i> Local Storage</a></li>
+                <li><a href="#wijmo"><i class="icon-chevron-right"></i> Local Storage</a></li>
+                <li><a href="#file-input"><i class="icon-chevron-right"></i> Accordion</a></li>
+                <li><a href="#date-range"><i class="icon-chevron-right"></i> Tabs</a></li>
             </ul>
         </div>
         <div class="span9">
             <!-- Wijmo ================================================== -->
             <section id="wijmo">
+                <div class="page-header">
+                    <h1>Web Storage</h1>
+                </div>
+                <p>Local storage this is web 2.0</p>
+
+                <form id="frmCadastre">
+                    <label for="txtID">ID:</label>
+                    <input type="text" id="txtID" required/>
+                    <label for="txtName">Name:</label>
+                    <input type="text" id="txtName"/>
+                    <label for="txtPhone">Phone:</label>
+                    <input type="text" id="txtPhone"/>
+                    <label for="txtEmail">Email:</label>
+                    <input type="text" id="txtEmail"/><br/>
+                    <input type="submit" value="Save" id="saveBtn" class="ui-button-primary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"/>
+                </form>
+
+                <table id="tblList" class="table table-bordered table-striped table-hover">
+
+                </table>
+
+            </section>
+
+            <!-- File input -->
+            <section id="file-input">
+
                 <div class="page-header">
                     <h1>Accordion</h1>
                 </div>
@@ -144,12 +171,12 @@
 
                 <div class="clearfix"></div>
 
-
-
             </section>
-
+            <!-- end file input -->
             <!-- File input -->
-            <section id="file-input">
+
+            <section id="date-range">
+
                 <div class="page-header">
                     <h1>Tabs</h1>
                 </div>
@@ -160,9 +187,9 @@
 
                 <div id="tabs">
                     <ul>
-                        <li><a href="#tabs-1">Nunc tincidunt</a></li>
-                        <li><a href="#tabs-2">Proin dolor</a></li>
-                        <li><a href="#tabs-3">Aenean lacinia</a></li>
+                        <li><a href="#tabs-1">First Tab</a></li>
+                        <li><a href="#tabs-2">Second Tab</a></li>
+                        <li><a href="#tabs-3">Third Tab</a></li>
                     </ul>
                     <div id="tabs-1">
                         <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
@@ -175,35 +202,6 @@
                         <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
                     </div>
                 </div>
-
-
-
-            </section>
-            <!-- end file input -->
-            <!-- File input -->
-
-            <section id="date-range">
-                <div class="page-header">
-                    <h1>Web Storage</h1>
-                </div>
-                <p>Local storage this is web 2.0</p>
-
-                <form id="frmCadastre">
-                        <label for="txtID">ID:</label>
-                        <input type="text" id="txtID" required/>
-                        <label for="txtName">Name:</label>
-                        <input type="text" id="txtName"/>
-                        <label for="txtPhone">Phone:</label>
-                        <input type="text" id="txtPhone"/>
-                        <label for="txtEmail">Email:</label>
-                        <input type="text" id="txtEmail"/><br/>
-                        <input type="submit" value="Save" id="saveBtn" class="ui-button-primary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"/>
-                </form>
-
-                <table id="tblList" class="table table-bordered table-striped table-hover">
-
-                </table>
-
 
 
             </section>
@@ -333,7 +331,7 @@
                 for(var i in tbClients){
                     var cli = JSON.parse(tbClients[i]);
                     $("#tblList tbody").append("<tr>"+
-                        "	<td><img alt=' ' " +i+"' class='btnEdit icon-pencil icon-2x  label-success'/> <img alt=' ' "+i+" class='btnDelete icon-remove icon-2x label-warning'/></td>" +
+                        "	<td><area alt='"+i+"' class='btnEdit icon-pencil icon-2x label-success'/> <area src='' alt='"+i+"' class='btnDelete icon-2x icon-remove label-warning'/></td>" +
                         "	<td>"+cli.ID+"</td>" +
                         "	<td>"+cli.Name+"</td>" +
                         "	<td>"+cli.Phone+"</td>" +
