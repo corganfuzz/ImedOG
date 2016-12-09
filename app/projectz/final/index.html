@@ -22,92 +22,7 @@
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
-
-
-    <style>
-
-        #box0 {
-            display: none;
-        }
-
-        h3 {
-            color: #FFF;
-            font-weight: 300;
-        }
-
-        .ui-dialog-titlebar-close {
-            display:none;
-        }
-
-        .ui-dialog-titlebar {
-            display:none;
-        }
-
-        .ui-widget-overlay {
-            background: #000;
-            opacity: .7;
-            -moz-opacity: 0.7;
-            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-        }
-
-
-        .thumbDude{
-            background: no-repeat url("images/dude.jpg");
-            background-size: 40px 40px;
-        }
-
-        .thumbLady{
-            background: no-repeat url("images/lady.jpg");
-            background-size: 40px 40px;
-        }
-
-        #emptybox {
-            width: 40px;
-            height: 40px;
-        }
-
-         .cc-selector input{
-             margin:0;padding:0;
-             -webkit-appearance:none;
-             -moz-appearance:none;
-             appearance:none;
-         }
-
-        .cc-selector-2 input{
-            position:absolute;
-            z-index:999;
-        }
-
-        .dude{background-image:url("images/dude.jpg");}
-        .lady{background-image:url("images/lady.jpg");}
-
-        .cc-selector-2 input:active +.drinkcard-cc, .cc-selector input:active +.drinkcard-cc{opacity: .9;}
-        .cc-selector-2 input:checked +.drinkcard-cc, .cc-selector input:checked +.drinkcard-cc{
-            -webkit-filter: none;
-            -moz-filter: none;
-            filter: none;
-        }
-        .drinkcard-cc{
-            cursor:pointer;
-            background-size:contain;
-            background-repeat:no-repeat;
-            display:inline-block;
-            width:100px;height:70px;
-            -webkit-transition: all 100ms ease-in;
-            -moz-transition: all 100ms ease-in;
-            transition: all 100ms ease-in;
-            -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-            -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-            filter: brightness(1.8) grayscale(1) opacity(.7);
-        }
-        .drinkcard-cc:hover{
-            -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
-            -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-            filter: brightness(1.2) grayscale(.5) opacity(.9);
-        }
-
-    </style>
+   <link rel="stylesheet" href="css/cookie.css">
 
    <!-- Script
    ================================================== -->
@@ -141,6 +56,7 @@
 	        <li><a class="smoothscroll" href="#resume">Resume</a></li>
             <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
             <li><a class="smoothscroll" href="#contact">Contact</a></li>
+             <li><a href="fun.html">Fun</a> </li>
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
@@ -911,89 +827,7 @@
 
    <script src="js/js.cookie.js"></script>
 
-<script>
-    $(document).ready( function () {
-
-        $('#box0').dialog({
-            autoOpen: false,
-            closeOnEscape: false,
-            modal: true,
-            draggable: false,
-            resizable: false,
-            width: 300,
-            height: 600
-        });
-
-        //form validation
-
-        $('#btnSave').click(function (e) {
-
-            e.preventDefault();
-
-            var Name;
-            var Email;
-            var Genre;
-            var isValid = true;
-
-            Name = $('#Name').val();
-            Email = $('#Email').val();
-            Genre = $('input[name=genre]:checked', '#myForm').val();
-
-                $('#NameError').text('').removeClass();
-                $('#EmailError').text('').removeClass();
-
-               if (Name == '') {
-                   isValid = false;
-                   $('#NameError').text('Enter a Name').addClass('ui-state-error')
-               }
-
-               if (Email == '') {
-                    isValid = false;
-                    $('#EmailError').text('Enter an Email').addClass('ui-state-error')
-                }
-
-               if (isValid == true) {
-
-                    Cookies.set("Name" , Name , {expires: 7});
-                    Cookies.set("Genre", Genre , {expires: 7});
-
-                   $("#box0").dialog("close");
-                   $("#cookieMonster").text("Welcome, " + Name);
-
-                   if (Genre == 'dude') {
-                       $('#emptybox').addClass('thumbDude');
-                   }else {
-                       $('#emptybox').addClass('thumbLady');
-                   }
-               }
-
-               return isValid;
-
-        });
-
-        //check cookie
-
-        var cookieName = Cookies.get("Name");
-        var cookieDude = Cookies.get("Genre");
-
-        if (cookieName != null) {
-            $("#cookieMonster").text("Hello again! " + cookieName);
-
-            if (cookieDude == 'dude') {
-                $('#emptybox').addClass('thumbDude');
-            }else {
-                $('#emptybox').addClass('thumbLady');
-            }
-        }else {
-            setTimeout(function () {
-                $("#box0").dialog('open');
-            }, 2000);
-        }
-
-
-    });
-
-</script>
+<script src="js/custom-jquery.js"></script>
 
 </body>
 

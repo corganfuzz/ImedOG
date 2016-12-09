@@ -21,6 +21,8 @@
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
     <!--begin wijmo menu-->
     <link href="third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/cookie.css">
+
     <!--End wijmo menu-->
     <!--begin file input-->
     <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet">
@@ -82,13 +84,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
+            <span id="emptybox" class="brand"></span>
+
             <div class="nav-collapse collapse">
                 <ul class="nav">
-
-                    <li class="active">
-                        <a href="./extra.html">Home</a>
-                    </li>
+                    <li> <a id="cookieMonster" class="brand" href="">Hello Stranger</a></li>
+                    <li><a href="index.html">Go Back</a></li>
                 </ul>
             </div>
         </div>
@@ -189,14 +190,14 @@
 
                 <form id="frmCadastre">
                         <label for="txtID">ID:</label>
-                        <input type="text" id="txtID"/>
+                        <input type="text" id="txtID" required/>
                         <label for="txtName">Name:</label>
                         <input type="text" id="txtName"/>
                         <label for="txtPhone">Phone:</label>
                         <input type="text" id="txtPhone"/>
                         <label for="txtEmail">Email:</label>
                         <input type="text" id="txtEmail"/><br/>
-                        <input type="submit" value="Save" id="btnSave" class="ui-button-primary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"/>
+                        <input type="submit" value="Save" id="saveBtn" class="ui-button-primary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"/>
                 </form>
 
                 <table id="tblList" class="table table-bordered table-striped table-hover">
@@ -245,9 +246,17 @@
 <script src="third-party/wijmo/jquery.wijmo-open.1.5.0.min.js" type="text/javascript"></script>
 <!--End wijmo-->
 <script src="assets/js/demo.js" type="text/javascript"></script>
+<script src="js/js.cookie.js"></script>
+<script src="js/custom-jquery.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 
 
 <script>
+    $(document).ready( function () {
+        $('#frmCadastre').validate();
+
+
+
         //accordion widget
         $(function() {
             $( "#menu-collapse" ).accordion({
@@ -280,6 +289,7 @@
                     Phone : $("#txtPhone").val(),
                     Email : $("#txtEmail").val()
                 });
+
                 tbClients.push(client);
                 localStorage.setItem("tbClients", JSON.stringify(tbClients));
                 alert("The data was saved.");
@@ -292,10 +302,10 @@
                     Name  : $("#txtName").val(),
                     Phone : $("#txtPhone").val(),
                     Email : $("#txtEmail").val()
-                });//Alter the selected item on the table
+                });
                 localStorage.setItem("tbClients", JSON.stringify(tbClients));
                 alert("The data was edited.")
-                operation = "A"; //Return to default value
+                operation = "A";
                 return true;
             }
 
@@ -363,7 +373,7 @@
         });
 
 
-
+    });
 
 
 </script>
